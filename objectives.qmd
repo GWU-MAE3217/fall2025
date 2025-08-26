@@ -42,5 +42,9 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
 
 5. Demonstrate an ability to apply mathematics and physics to problems involving fluid mechanics.
 
+6. Demonstrate the very basics of using a programming language like Python to visualize and analyze data 
+
+7. Demonstrate an understanding and appreciation for engineering ethics via case studies and discussions.
+
 
 

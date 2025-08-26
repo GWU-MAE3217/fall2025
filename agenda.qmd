@@ -96,17 +96,16 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>3: 09/15 to 09/21</td>
             <td>09/17</td>   
             <td><ul> 
-                    <li><strong>Lab-1:</strong> Buoyancy Application Experiment</li> 
-                    <li><strong>Python Programming:</strong>Very basics to analyze data</li>
+                    <li><strong>Recitation-2:</strong> Python Programming: Very basics to analyze data</li>
             </td>                      
             <td>SEH B1280</td>            
-            <td>Submit <strong>Lab-1</strong> data and a working Python program by 9/19</td>      
+            <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      
         </tr>
         <tr>
             <td>4: 09/22 to 09/28</td>
             <td>09/24</td>            
             <td><ul> 
-                    <li><strong>Lab-2:</strong> Venturi Tube</li>
+                    <li><strong>Lab-1:</strong> Venturi Tube</li>
             </td>
             <td>SEH B1200</td>            
             <td>None</td>    
@@ -115,29 +114,29 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>5: 09/29 to 10/05</td>
             <td>10/1</td> 
             <td><ul> 
-                    <li><strong>Recitation-2:</strong> Review</li> 
-                    <li><strong>P-Set2:</strong> Practice Problems</li>
+                    <li><strong>Recitation-3:</strong> Review</li> 
+                    <li><strong>P-Set3:</strong> Practice Problems</li>
             </td>   
             <td>SEH B1280</td>                                          
-            <td>Submit <strong>P-Set2</strong> solutions by 10/03</td>      
+            <td>Submit <strong>P-Set3</strong> solutions by 10/03</td>      
         </tr>
         <tr>
             <td>6: 10/06 to 10/12</td>
             <td>10/08</td>            
             <td><ul>
-                <li><strong>Lab-3:</strong> Hydraulic Jump Experiment</li>
+                <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li>
             </td>
             <td>SEH B1200</td>            
-            <td>Submit <strong>Lab-2</strong> report on Venturi Tube by 10/08</td>      
+            <td>Submit <strong>Lab-1</strong> report on Venturi Tube by 10/08</td>      
         </tr>
         <tr class="table-active">
             <td>7: 10/13 to 10/19</td>
             <td>10/15</td>  
             <td><ul>
-                <li><strong>Lab-4:</strong> Impact of a Jet</li>
+                <li><strong>Lab-3:</strong> Impact of a Jet</li>
             </td>                      
             <td>SEH B1200</td>            
-            <td>Submit <strong>Lab-3</strong> report on Hydraulic Jump by 10/15</td>      
+            <td>Submit <strong>Lab-2</strong> report on Hydraulic Jump by 10/15</td>      
         </tr>
         <tr>
             <td>8: 10/20 to 10/26</td>
@@ -151,7 +150,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>10/29</td>            
             <td><strong  style="text-align: center">Engineering Ethics</strong><ul>
                     <li>Case studies</li>
-                    <li> Introduction to the Group Poster Project</li> 
+                    <li>Introduction to the Group Poster Project</li> 
                     <li>Group Formation</li>
             </td>            
             <td>SEH B1280</td>            
@@ -161,12 +160,12 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>10: 11/03 to 11/09</td>
             <td>11/05</td>   
             <td><ul> 
-                <li><strong>Recitation-3:</strong> Exact solutions to the Navier-Stokes Equations</li>
-                <li><strong>P-Set3:</strong> Practice problems on Navier-Stokes Equations</li>
+                <li><strong>Recitation-4:</strong> Exact solutions to the Navier-Stokes Equations</li>
+                <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
             </td>                     
             <td>SEH B1280</td>            
             <td><ul> 
-                    <li>Submit <strong>P-Set3</strong> solutions by 11/07</li> 
+                    <li>Submit <strong>P-Set4</strong> solutions by 11/07</li> 
                     <li>Submit <strong>Lab-4</strong> report on Impact of Jet by 11/08</li>
             </td>
         </tr>        
@@ -174,7 +173,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>11: 11/10 to 11/16</td>
             <td>11/12</td>  
             <td><ul> 
-                    <li><strong>Lab-5:</strong> Fluid Friction</li>
+                    <li><strong>Lab-4:</strong> Fluid Friction</li>
             </td>
             <td>SEH B1200</td>            
             <td>None</td>
@@ -183,14 +182,14 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>12: 11/17 to 11/23</td>
             <td>11/19</td>            
             <td><ul> 
-                <li><strong>Recitation-4:</strong> Final Review</li>
-                <li><strong>P-set4:</strong> Practice Problems</li>
+                <li><strong>Recitation-5:</strong> Final Review</li>
+                <li><strong>P-set5:</strong> Practice Problems</li>
             </td>
             <td>SEH B1200</td>            
             <td><ul> 
                     <li>Submit <strong>Ethics Poster draft</strong> by 11/23</li>                
-                    <li>Submit <strong>P-Set4</strong> solutions by 12/01</li> 
-                    <li>Submit <strong>Lab-5</strong> report on Fluid Friction by 12/01</li>
+                    <li>Submit <strong>P-Set5</strong> solutions by 12/01</li> 
+                    <li>Submit <strong>Lab-4</strong> report on Fluid Friction by 12/01</li>
             </td>
         </tr>
         <tr class="table-active">
@@ -198,8 +197,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td style="color: red;">11/19</td>            
             <td colspan="2" style="color: red;">Thanksgiving Break (no classes)</td>        
             <td><strong>Make sure you</strong><ul> 
-                <li>Submit <strong>P-Set4</strong> solutions by 12/01, and </li> 
-                <li>Submit <strong>Lab-5</strong> report on Fluid Friction by 12/01</li>
+                <li>Submit <strong>P-Set5</strong> solutions by 12/01, and </li> 
+                <li>Submit <strong>Lab-4</strong> report on Fluid Friction by 12/01</li>
             </td>
         </tr>         
         <tr>
@@ -208,8 +207,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td style="text-align: center"><strong>Engineering Ethics Poster Presentations</td>
             <td>SEH B1280</td>            
             <td><strong>Final Reminder that you need to</strong><ul> 
-                <li>Submit <strong>P-Set4</strong> solutions by 12/01, and </li> 
-                <li>Submit <strong>Lab-5</strong> report on Fluid Friction by 12/01</li>
+                <li>Submit <strong>P-Set5</strong> solutions by 12/01, and </li> 
+                <li>Submit <strong>Lab-4</strong> report on Fluid Friction by 12/01</li>
             </td>
         </tr>    
         <tr class="table-info">
