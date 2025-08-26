@@ -75,6 +75,7 @@ This <strong>laboratory course</strong> teaches the following topics through exp
 - Laboratory-based application Bernoulli’s equation, dimensional analysis and similitude
 - Applications of inviscid and viscous flow. 
 - Experiments and introductory-level Python Programming in fluid mechanics 
+- Exposure to engineering ethics via case studies
 
 
 
