@@ -11,6 +11,21 @@ format:
 Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.
 :::
 
+:::{.callout-important}
+- You are encouraged to bring your own personal machine or laptop to the laboratory and recitations. 
+  - Your personal machine should be able to connect to the WiFi network provided at the location. 
+  - **The instruction team does not provide Computer Tech support** unless there are minor issues that could be sorted out.  
+  - **We prefer that your computer**
+    - is a laptop, with either MacOS 12+ or Windows 10+ operating system 
+    - has a standard US keyboard layout i.e, a QWERTY keyboard. 
+      - The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.
+- Install the following pieces of Python IDEs on your personal machine:
+  - [Anaconda](https://www.anaconda.com/download/success) 
+  - [Thonny](https://thonny.org)
+- Join [EdStem](https://edstem.org/us/join/XjP3Wp) for the course discussion board where you can ask questions and connect with your colleagues and the instruction team.
+- See the data from Lab-0, the Tin Foil Experiment<a href="/documents/plot.html" target="_blank"><strong> here</strong>
+:::
+
 <!-- :::{.callout-important}
 **Registartion:**
 [Registration link](https://events.vtools.ieee.org/event/register/437187)
@@ -113,26 +128,6 @@ This course will have 150 minutes of lecture time per week, that includes approx
 
 ## Textbook, hardware and other course material
 There is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor.
-
-:::{.callout-important}
-<!-- - Our staff is limiting the use of Linux OS-based laptops and cannot support them this semester.  -->
-**Kindly note that**
-
-- Your personal machine should be able to connect to the WiFi network provided at the location. 
-
-- **The instruction team does not provide Computer Tech support** unless there are minor issues that could be sorted out.  
-
-- **We prefer that your computer**
-    - is a laptop, with either MacOS 12+ or Windows 10+ operating system 
-    - has a standard US keyboard layout i.e, a QWERTY keyboard. 
-        - The QWERTY (pronounced KWEHR-tee) keyboard is the standard typewriter and computer keyboard in countries that use a Latin-based alphabet.
-:::
-<!-- ::: {.callout-note}
-Note that there are five types of callouts, including:
-`note`, `warning`, `important`, `tip`, and `caution`.
-::: -->
-
-
 
 <!-- ::: {.callout-caution collapse="true"}
 ## Expand To Learn About Collapse
