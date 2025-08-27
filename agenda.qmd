@@ -61,6 +61,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td><ul> 
                     <li><a href="/documents/tin_foil_boat_Fall2025.pdf" target="_blank"><strong>[Lab-0]</strong></a>: Buoyancy force on Tin Foil Boat</li> 
                     <li>Installation of Python IDE (Anaconda or Thonny) </li>
+                    <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data</strong></li>
             </td>
             <td>SEH B1200</td>            
             <td>Upload <strong>Lab-0</strong> deliverable by 08/29</td>                        
