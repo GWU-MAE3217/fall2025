@@ -1,0 +1,5 @@
+statsmodels
+scipy
+matplotlib
+numpy
+pandas

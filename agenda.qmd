@@ -38,9 +38,9 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
 ```{=html}
 <table style="width:100%">
     <colgroup>
-        <col style="width:20%">
         <col style="width:5%">
-        <col style="width:30%">
+        <col style="width:5%">
+        <col style="width:45%">
         <col style="width:10%">
         <col style="width:35%">
     </colgroup>
@@ -61,7 +61,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td><ul> 
                     <li><a href="/documents/tin_foil_boat_Fall2025.pdf" target="_blank"><strong>[Lab-0]</strong></a>: Buoyancy force on Tin Foil Boat</li> 
                     <li>Installation of Python IDE (Anaconda or Thonny) </li>
-                    <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data</strong></li>
+                    <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>
             </td>
             <td>SEH B1200</td>            
             <td>Upload <strong>Lab-0</strong> deliverable by 08/29</td>                        
@@ -76,18 +76,27 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>1: 09/01 to 09/07</td>
             <td>09/03</td> 
-            <td><ul> 
-                    <li><strong>Recitation-0:</strong> Manometers</li> 
-                    <li><strong>P-Set0:</strong> Practice Problems on Manometers</li>
+            <td><strong  style="text-align: center">Recitation-0:</strong> Tin Foil Boat Data Analysis + Manometers<ul>
+                    <li><strong>P-Set00:</strong> Correlation calculatioj in Tin Foil Boat data using Python</li>                    
+                    <li><strong>P-Set01:</strong> Practice Problems on Manometers</li>
+                    <!-- <li><a href="/documents/Recitation0/Pset00/R0_Pset00.pdf" target="_blank"><strong>[P-Set00]</strong></a> Analysis of Tin Foil Boat data using Python</li>
+                    <li><a href="/documents/Recitation0/Pset01/R0_Pset01.csv" target="_blank"><strong>[P-Set01]</strong></a> Practice Problems on Manometers</li>                                     -->
             </td>           
             <td>SEH B1280</td>            
-            <td>Submit <strong>P-Set0</strong> solutions by 09/06</td>                        
+            <td><ul>
+                <li>Submit <strong>P-Set00</strong> solutions by 09/06</li>      
+                <li>Submit <strong>P-Set01</strong> solutions by 09/06</li>   
+                <li><strong>Download files for P-Set00 submission</strong></li>
+                <ul>
+                    <li><a href="/documents/Recitation0/Pset00/boat_data.csv" target="_blank"><strong>Boat Data</strong></li>
+                    <li><a href="/documents/Recitation0/Pset00/requirements.txt" target="_blank"><strong>Python library requirements file</strong></li>
+                    <!-- <li><a href="/documents/Recitation0/Pset00/TinFoil_Corrrelation.py" target="_blank"><strong>Python program</strong></li> -->
+            </td>                         
         </tr>
         <tr>                    
             <td>2: 09/08 to 09/14</td>
             <td>09/10</td>    
-            <td><ul> 
-                    <li><strong>Recitation-1:</strong> Hydrostatic forces and Gates</li> 
+            <td><strong  style="text-align: center">Recitation-1:</strong> Hydrostatic forces and Gates<ul> 
                     <li><strong>P-Set1:</strong> Practice Problems on Hydrostatic forces and Gates</li>
             </td>                    
             <td>SEH B1280</td>            
@@ -96,8 +105,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>3: 09/15 to 09/21</td>
             <td>09/17</td>   
-            <td><ul> 
-                    <li><strong>Recitation-2:</strong> Python Programming: Very basics to analyze data</li>
+            <td><strong  style="text-align: center">Python Programming:</strong> More on how-to analyze data<ul> 
             </td>                      
             <td>SEH B1280</td>            
             <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      
@@ -114,8 +122,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>5: 09/29 to 10/05</td>
             <td>10/1</td> 
-            <td><ul> 
-                    <li><strong>Recitation-3:</strong> Review</li> 
+            <td><strong  style="text-align: center">Recitation-3:</strong> Review<ul> 
                     <li><strong>P-Set3:</strong> Practice Problems</li>
             </td>   
             <td>SEH B1280</td>                                          
@@ -160,8 +167,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>10: 11/03 to 11/09</td>
             <td>11/05</td>   
-            <td><ul> 
-                <li><strong>Recitation-4:</strong> Exact solutions to the Navier-Stokes Equations</li>
+            <td><strong  style="text-align: center">Recitation-4:</strong> Exact solutions to the Navier-Stokes Equations<ul> 
                 <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
             </td>                     
             <td>SEH B1280</td>            
@@ -182,8 +188,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>12: 11/17 to 11/23</td>
             <td>11/19</td>            
-            <td><ul> 
-                <li><strong>Recitation-5:</strong> Final Review</li>
+            <td><strong  style="text-align: center">Recitation-5:</strong> Final Review<ul> 
                 <li><strong>P-set5:</strong> Practice Problems</li>
             </td>
             <td>SEH B1200</td>            
