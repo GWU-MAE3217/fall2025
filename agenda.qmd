@@ -100,7 +100,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                     <li><strong>P-Set1:</strong> Practice Problems on Hydrostatic forces and Gates</li>
             </td>                    
             <td>SEH B1280</td>            
-            <td>Submit <strong>P-Set1</strong> solutions by 09/12</td>      
+            <td>Submit <strong>P-Set1</strong> solutions by 09/16</td>      
         </tr>
         <tr class="table-active">
             <td>3: 09/15 to 09/21</td>
