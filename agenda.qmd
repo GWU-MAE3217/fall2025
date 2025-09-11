@@ -100,7 +100,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                     <li><strong>P-Set1:</strong> Practice Problems on Hydrostatic forces and Gates</li>
             </td>                    
             <td>SEH B1280</td>            
-            <td>Submit <strong>P-Set1</strong> solutions by 09/16</td>      
+            <td>None</td>      
         </tr>
         <tr class="table-active">
             <td>3: 09/15 to 09/21</td>
@@ -113,16 +113,16 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                     <li><strong>Lab-1:</strong> Venturi Tube</li>
             </td> 
             <td>SEH B1200</td>            
-            <td>None</td> 
+            <td>Submit <strong>P-Set1</strong> solutions by 09/16</td> 
         </tr>
         <tr>
             <td>4: 09/22 to 09/28</td>
             <td>09/24</td>            
-            <td><strong  style="text-align: center">Recitation-3:</strong> Review<ul> 
-                    <li><strong>P-Set3:</strong> Practice Problems</li>
+            <td><strong  style="text-align: center">Recitation-2:</strong> Review<ul> 
+                    <li><strong>P-Set2:</strong> Practice Problems</li>
             </td>   
             <td>SEH B1280</td>                                          
-            <td>Submit <strong>P-Set3</strong> solutions by 10/05</td>       
+            <td>None</td>       
         </tr>
         <tr class="table-active">
             <td>5: 09/29 to 10/05</td>
@@ -131,49 +131,60 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                 <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li>
             </td>
             <td>SEH B1200</td>            
-            <td>Submit <strong>Lab-1</strong> report on Venturi Tube by 10/01</td>     
+            <td>
+                <li>Submit <strong>P-Set2</strong> solutions by 09/30</li>                
+                <li>Submit <strong>Lab-1</strong> report on Venturi Tube by 10/01</li>
+            </td>     
         </tr>
         <tr>
             <td>6: 10/06 to 10/12</td>
-            <td>10/08</td>            
-            <td><strong  style="text-align: center">Python Programming:</strong> More on how-to analyze data<ul> 
-            </td>                      
-            <td>SEH B1280</td>            
-            <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>          
-        </tr>
-        <tr class="table-active">
-            <td>7: 10/13 to 10/19</td>
-            <td>10/15</td>  
+            <td>10/08</td>   
             <td><ul>
                 <li><strong>Lab-3:</strong> Impact of a Jet</li>
             </td>                      
             <td>SEH B1200</td>            
+            <td>None</td>                     
+        </tr>
+        <tr class="table-active">
+            <td>7: 10/13 to 10/19</td>
+            <td>10/15</td>             
+            <td><strong  style="text-align: center">Recitation 3: </strong> Python Programming with more on how-to analyze experimental data<ul> 
+            </td>                      
+            <td>SEH B1280</td>            
+            <!-- <td>Submit <strong>P-Set3</strong> data and a working Python program by 9/19</td>          
+                        <td>10/15</td>  
+            <td><ul>
+                <li><strong>Lab-3:</strong> Impact of a Jet</li>
+            </td>                      
+            <td>SEH B1200</td>             -->
             <td>Submit <strong>Lab-2</strong> report on Hydraulic Jump by 10/15</td>      
         </tr>
         <tr>
             <td>8: 10/20 to 10/26</td>
             <td>10/22</td>            
-            <td style="text-align: center"><strong>Laboratory Make Up Session</strong></td>
-            <td>SEH B1200</td>            
-            <td>None</td>  
-        </tr>
-        <tr class="table-active">
-            <td>9: 10/27 to 11/02</td>
-            <td>10/29</td>            
             <td><strong  style="text-align: center">Engineering Ethics</strong><ul>
                     <li>Case studies</li>
                     <li>Introduction to the Group Poster Project</li> 
                     <li>Group Formation</li>
-            </td>            
+            </td>  
+            <td>SEH B1280</td>            
+            <td>Submit <strong>Lab-3</strong> report on Impact of a Jet by 10/22</td>    
+        </tr>
+        <tr class="table-active">
+            <td>9: 10/27 to 11/02</td>
+            <td>10/29</td>  
+            <td><strong  style="text-align: center">Recitation-4:</strong> Exact solutions to the Navier-Stokes Equations<ul> 
+                <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
+            </td>                                
             <td>SEH B1280</td>            
             <td>None</td>  
         </tr>
         <tr>
             <td>10: 11/03 to 11/09</td>
             <td>11/05</td>   
-            <td><strong  style="text-align: center">Recitation-4:</strong> Exact solutions to the Navier-Stokes Equations<ul> 
-                <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
-            </td>                     
+            <td><ul>                     
+                    <li><strong>Lab-4:</strong> Fluid Friction</li>
+            </td>                               
             <td>SEH B1280</td>            
             <td><ul> 
                     <li>Submit <strong>P-Set4</strong> solutions by 11/07</li> 
@@ -183,19 +194,20 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>11: 11/10 to 11/16</td>
             <td>11/12</td>  
-            <td><ul> 
-                    <li><strong>Lab-4:</strong> Fluid Friction</li>
+                       <td><strong  style="text-align: center">Recitation-5:</strong> Final Review<ul> 
+                <li><strong>P-set5:</strong> Practice Problems</li>
             </td>
-            <td>SEH B1200</td>            
+            <td>SEH B1280</td>               
             <td>None</td>
         </tr>             
         <tr>
             <td>12: 11/17 to 11/23</td>
-            <td>11/19</td>            
-            <td><strong  style="text-align: center">Recitation-5:</strong> Final Review<ul> 
-                <li><strong>P-set5:</strong> Practice Problems</li>
-            </td>
-            <td>SEH B1200</td>            
+            <td>11/19</td>     
+            <td style="text-align: center"><strong>Laboratory Make Up Session</strong></td>        
+            <!-- <td><ul>                     
+                    <li><strong>Lab-4:</strong> Fluid Friction</li>
+            </td> -->
+            <td>SEH B1200</td>                                        
             <td><ul> 
                     <li>Submit <strong>Ethics Poster draft</strong> by 11/23</li>                
                     <li>Submit <strong>P-Set5</strong> solutions by 12/01</li> 
@@ -204,7 +216,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         </tr>
         <tr class="table-active">
             <td style="color: red;">13: 11/24 to 11/30</td>
-            <td style="color: red;">11/19</td>            
+            <td style="color: red;">11/27</td>            
             <td colspan="2" style="color: red;">Thanksgiving Break (no classes)</td>        
             <td><strong>Make sure you</strong><ul> 
                 <li>Submit <strong>P-Set5</strong> solutions by 12/01, and </li> 
@@ -213,7 +225,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         </tr>         
         <tr>
             <td>14: 12/01 to 12/07</td>
-            <td>11/26</td>            
+            <td>12/03</td>            
             <td style="text-align: center"><strong>Engineering Ethics Poster Presentations</td>
             <td>SEH B1280</td>            
             <td><strong>Final Reminder that you need to</strong><ul> 
