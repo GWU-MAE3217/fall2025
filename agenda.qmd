@@ -105,37 +105,41 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>3: 09/15 to 09/21</td>
             <td>09/17</td>   
-            <td><strong  style="text-align: center">Python Programming:</strong> More on how-to analyze data<ul> 
+            <!-- <td><strong  style="text-align: center">Python Programming:</strong> More on how-to analyze data<ul> 
             </td>                      
             <td>SEH B1280</td>            
-            <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      
+            <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      -->
+            <td><ul> 
+                    <li><strong>Lab-1:</strong> Venturi Tube</li>
+            </td> 
+            <td>SEH B1200</td>            
+            <td>None</td> 
         </tr>
         <tr>
             <td>4: 09/22 to 09/28</td>
             <td>09/24</td>            
-            <td><ul> 
-                    <li><strong>Lab-1:</strong> Venturi Tube</li>
-            </td>
-            <td>SEH B1200</td>            
-            <td>None</td>    
-        </tr>
-        <tr class="table-active">
-            <td>5: 09/29 to 10/05</td>
-            <td>10/1</td> 
             <td><strong  style="text-align: center">Recitation-3:</strong> Review<ul> 
                     <li><strong>P-Set3:</strong> Practice Problems</li>
             </td>   
             <td>SEH B1280</td>                                          
-            <td>Submit <strong>P-Set3</strong> solutions by 10/03</td>      
+            <td>Submit <strong>P-Set3</strong> solutions by 10/05</td>       
         </tr>
-        <tr>
-            <td>6: 10/06 to 10/12</td>
-            <td>10/08</td>            
+        <tr class="table-active">
+            <td>5: 09/29 to 10/05</td>
+            <td>10/1</td> 
             <td><ul>
                 <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li>
             </td>
             <td>SEH B1200</td>            
-            <td>Submit <strong>Lab-1</strong> report on Venturi Tube by 10/08</td>      
+            <td>Submit <strong>Lab-1</strong> report on Venturi Tube by 10/01</td>     
+        </tr>
+        <tr>
+            <td>6: 10/06 to 10/12</td>
+            <td>10/08</td>            
+            <td><strong  style="text-align: center">Python Programming:</strong> More on how-to analyze data<ul> 
+            </td>                      
+            <td>SEH B1280</td>            
+            <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>          
         </tr>
         <tr class="table-active">
             <td>7: 10/13 to 10/19</td>
