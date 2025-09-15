@@ -57,14 +57,14 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
     <tbody>
         <tr>
             <td>0: 08/25 to 08/31</td>
-            <td>08/27</td>            
-            <td><ul> 
-                    <li><a href="/documents/tin_foil_boat_Fall2025.pdf" target="_blank"><strong>[Lab-0]</strong></a>: Buoyancy force on Tin Foil Boat</li> 
+            <td>08/27</td>           
+            <td><a href="/documents/tin_foil_boat_Fall2025.pdf" target="_blank"><strong>[Lab-0]</strong></a>: Buoyancy force on Tin Foil Boat<ul>  
                     <li>Installation of Python IDE (Anaconda or Thonny) </li>
-                    <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>
             </td>
             <td>SEH B1200</td>            
-            <td>Upload <strong>Lab-0</strong> deliverable by 08/29</td>                        
+            <td>Upload <strong>Lab-0</strong> deliverable by 08/29 <ul>
+                <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>  
+            </td>                      
         </tr>
         <tr class="table-info">
             <td> </td>
@@ -77,7 +77,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>1: 09/01 to 09/07</td>
             <td>09/03</td> 
             <td><strong  style="text-align: center">Recitation-0:</strong> Tin Foil Boat Data Analysis + Manometers<ul>
-                    <li><strong>P-Set00:</strong> Correlation calculatioj in Tin Foil Boat data using Python</li>                    
+                    <li><strong>P-Set00:</strong> Correlation calculation in Tin Foil Boat data using Python</li>                    
                     <li><strong>P-Set01:</strong> Practice Problems on Manometers</li>
                     <!-- <li><a href="/documents/Recitation0/Pset00/R0_Pset00.pdf" target="_blank"><strong>[P-Set00]</strong></a> Analysis of Tin Foil Boat data using Python</li>
                     <li><a href="/documents/Recitation0/Pset01/R0_Pset01.csv" target="_blank"><strong>[P-Set01]</strong></a> Practice Problems on Manometers</li>                                     -->
@@ -109,8 +109,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             </td>                      
             <td>SEH B1280</td>            
             <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      -->
-            <td><ul> 
-                    <li><strong>Lab-1:</strong> Venturi Tube</li>
+            <td><strong>Lab-1:</strong> Venturi Tube<ul> 
+                    <!-- <li><strong>Lab-1:</strong> Venturi Tube</li> -->
             </td> 
             <td>SEH B1200</td>            
             <td>Submit <strong>P-Set1</strong> solutions by 09/16</td> 
@@ -127,8 +127,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>5: 09/29 to 10/05</td>
             <td>10/1</td> 
-            <td><ul>
-                <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li>
+            <td><strong>Lab-2:</strong> Hydraulic Jump Experiment<ul>
+                <!-- <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li> -->
             </td>
             <td>SEH B1200</td>            
             <td>
@@ -139,8 +139,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>6: 10/06 to 10/12</td>
             <td>10/08</td>   
-            <td><ul>
-                <li><strong>Lab-3:</strong> Impact of a Jet</li>
+            <td><strong>Lab-3:</strong> Impact of a Jet<ul>
+                <!-- <li><strong>Lab-3:</strong> Impact of a Jet</li> -->
             </td>                      
             <td>SEH B1200</td>            
             <td>None</td>                     
@@ -182,8 +182,8 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>10: 11/03 to 11/09</td>
             <td>11/05</td>   
-            <td><ul>                     
-                    <li><strong>Lab-4:</strong> Fluid Friction</li>
+            <td><strong>Lab-4:</strong> Fluid Friction<ul>                     
+                    <!-- <li><strong>Lab-4:</strong> Fluid Friction</li> -->
             </td>                               
             <td>SEH B1280</td>            
             <td><ul> 
