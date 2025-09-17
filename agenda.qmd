@@ -63,7 +63,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             </td>
             <td>SEH B1200</td>            
             <td>Upload <strong>Lab-0</strong> deliverable by 08/29 <ul>
-                <li><a href="/documents/plot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>  
+                <li><a href="/documents/TinFoil_DataPlot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>  
             </td>                      
         </tr>
         <tr class="table-info">
@@ -110,7 +110,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>SEH B1280</td>            
             <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      -->
             <td><a href="/documents/Lab_VenturiTube/venturi_tube_Fall2025.pdf" target="_blank"><strong>[Lab-1]</strong></a>: Venturi Tube<ul>
-                    <!-- <li><strong>Lab-1:</strong> Venturi Tube</li> -->
+                <li><a href="/documents/venturi_dashboard.html" target="_blank"><strong>Venturi Sample Data Plot</strong></li> 
             </td> 
             <td>SEH B1200</td>            
             <td><ul>
