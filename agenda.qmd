@@ -109,11 +109,21 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             </td>                      
             <td>SEH B1280</td>            
             <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      -->
-            <td><strong>Lab-1:</strong> Venturi Tube<ul> 
+            <td><a href="/documents/Lab_VenturiTube/venturi_tube_Fall2025.pdf" target="_blank"><strong>[Lab-1]</strong></a>: Venturi Tube<ul>
                     <!-- <li><strong>Lab-1:</strong> Venturi Tube</li> -->
             </td> 
             <td>SEH B1200</td>            
-            <td>Submit <strong>P-Set1</strong> solutions by 09/16</td> 
+            <td><ul>
+                <li>Submit <strong>P-Set1</strong> solutions by 09/16</li>
+                <li><strong>Download files for Lab-1 Submission</strong></li>
+                <ul>
+                    <li><a href="/documents/Lab_VenturiTube/SampleData_VenturiTube.xlsx" target="_blank"><strong>Sample Data</strong></li>
+                    <li><a href="/documents/Lab_VenturiTube/VentureCode_SampleData.ipynb" target="_blank"><strong>Sample Python</strong></li>
+                    <li><a href="/documents/Lab_VenturiTube/Bulusu_Bengisu-Bera-Niazi-Truemper_LawFirm.png" target="_blank"><strong>Plot generated from Sample Data</strong></li>                      
+                    <li><a href="/documents/Lab_VenturiTube/Venturi_Tube.xlsx" target="_blank"><strong>Template Excel file</strong></li>
+                  
+                    <!-- <li><a href="/documents/Recitation0/Pset00/TinFoil_Corrrelation.py" target="_blank"><strong>Python program</strong></li> -->
+            </td> 
         </tr>
         <tr>
             <td>4: 09/22 to 09/28</td>

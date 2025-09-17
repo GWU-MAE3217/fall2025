@@ -28,232 +28,60 @@
     "text": "Conclusion\nYou have successfully established connection to the Pi, allowing you to access and control it with ease.\nFor more information and support, you can visit the RealVNC website."
   },
   {
-    "objectID": "agenda.html",
-    "href": "agenda.html",
-    "title": "Schedule",
+    "objectID": "documents/Lab_VenturiTube/VentureCode_SampleData.html",
+    "href": "documents/Lab_VenturiTube/VentureCode_SampleData.html",
+    "title": "MAE 3127 - Fall 2025",
     "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThe attached course outline is subject to change depending on the pace of the class.\nPay attention to the location of each meeting. Sometimes you will be in the GW assigned classroom, and sometimes you will be in the Fluids Lab (SEH B1280 and SEH 1200).\nThe course is desinged with active learning modules with limited number of hardware components. \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nLaboratory or Recitation Topic\nRoom\nDeliverables (Due date)\n\n\n\n\n0: 08/25 to 08/31\n08/27\n[Lab-0]: Buoyancy force on Tin Foil Boat\n\nInstallation of Python IDE (Anaconda or Thonny)\n\nSEH B1200\nUpload Lab-0 deliverable by 08/29\n\n\nTin Foil Boat Data Plot\n\n\n\n\n09/01\nLabor Day (no classes)\n\n\n\n\n1: 09/01 to 09/07\n09/03\nRecitation-0: Tin Foil Boat Data Analysis + Manometers\n\nP-Set00: Correlation calculation in Tin Foil Boat data using Python\nP-Set01: Practice Problems on Manometers\n\nSEH B1280\n\nSubmit P-Set00 solutions by 09/06\nSubmit P-Set01 solutions by 09/06\nDownload files for P-Set00 submission\n\n\nBoat Data\n\nPython library requirements file\n\n\n\n\n2: 09/08 to 09/14\n09/10\nRecitation-1: Hydrostatic forces and Gates\n\nP-Set1: Practice Problems on Hydrostatic forces and Gates\n\nSEH B1280\nNone\n\n\n3: 09/15 to 09/21\n09/17\nLab-1: Venturi Tube\n\n\nSEH B1200\nSubmit P-Set1 solutions by 09/16\n\n\n4: 09/22 to 09/28\n09/24\nRecitation-2: Review\n\nP-Set2: Practice Problems\n\nSEH B1280\nNone\n\n\n5: 09/29 to 10/05\n10/1\nLab-2: Hydraulic Jump Experiment\n\n\nSEH B1200\n\nSubmit P-Set2 solutions by 09/30\n\n\nSubmit Lab-1 report on Venturi Tube by 10/01\n\n\n\n6: 10/06 to 10/12\n10/08\nLab-3: Impact of a Jet\n\n\nSEH B1200\nNone\n\n\n7: 10/13 to 10/19\n10/15\nRecitation 3: Python Programming with more on how-to analyze experimental data\n\n\nSEH B1280\nSubmit Lab-2 report on Hydraulic Jump by 10/15\n\n\n8: 10/20 to 10/26\n10/22\nEngineering Ethics\n\nCase studies\nIntroduction to the Group Poster Project\nGroup Formation\n\nSEH B1280\nSubmit Lab-3 report on Impact of a Jet by 10/22\n\n\n9: 10/27 to 11/02\n10/29\nRecitation-4: Exact solutions to the Navier-Stokes Equations\n\nP-Set4: Practice problems on Navier-Stokes Equations\n\nSEH B1280\nNone\n\n\n10: 11/03 to 11/09\n11/05\nLab-4: Fluid Friction\n\n\nSEH B1280\n\nSubmit P-Set4 solutions by 11/07\nSubmit Lab-4 report on Impact of Jet by 11/08\n\n\n\n11: 11/10 to 11/16\n11/12\nRecitation-5: Final Review\n\nP-set5: Practice Problems\n\nSEH B1280\nNone\n\n\n12: 11/17 to 11/23\n11/19\nLaboratory Make Up Session\nSEH B1200\n\nSubmit Ethics Poster draft by 11/23\nSubmit P-Set5 solutions by 12/01\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n13: 11/24 to 11/30\n11/27\nThanksgiving Break (no classes)\nMake sure you\n\nSubmit P-Set5 solutions by 12/01, and\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n14: 12/01 to 12/07\n12/03\n\nEngineering Ethics Poster Presentations\nSEH B1280\nFinal Reminder that you need to\n\nSubmit P-Set5 solutions by 12/01, and\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n\n12/08\nLast Day of Classes\n\n\n\n12/09\nDesignated Thursday\n\n\n\n12/10\nDesignated Friday\n\n\n\n12/11\nMake-up/Reading Day\n\n\n12/12 to 12/18\n\nFinal Exams",
-    "crumbs": [
-      "Schedule"
-    ]
+    "text": "Let’s start by importing our favorite friends as always going forward in this class: numpy, matplotlib, and pandas\n\nimport numpy as np\nfrom matplotlib import pyplot as plt\nimport pandas as pd\n\nBefore we get started with pandas, we are going to introduce a function called help() which will provide some information about functions we are working with!\n\n#Here we ask python to tell us about the np.array function, but this works with everything!\nhelp(np.array)\n\nHelp on built-in function array in module numpy:\n\narray(...)\n    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,\n          like=None)\n    \n    Create an array.\n    \n    Parameters\n    ----------\n    object : array_like\n        An array, any object exposing the array interface, an object whose\n        __array__ method returns an array, or any (nested) sequence.\n    dtype : data-type, optional\n        The desired data-type for the array.  If not given, then the type will\n        be determined as the minimum type required to hold the objects in the\n        sequence.\n    copy : bool, optional\n        If true (default), then the object is copied.  Otherwise, a copy will\n        only be made if __array__ returns a copy, if obj is a nested sequence,\n        or if a copy is needed to satisfy any of the other requirements\n        (`dtype`, `order`, etc.).\n    order : {'K', 'A', 'C', 'F'}, optional\n        Specify the memory layout of the array. If object is not an array, the\n        newly created array will be in C order (row major) unless 'F' is\n        specified, in which case it will be in Fortran order (column major).\n        If object is an array the following holds.\n    \n        ===== ========= ===================================================\n        order  no copy                     copy=True\n        ===== ========= ===================================================\n        'K'   unchanged F & C order preserved, otherwise most similar order\n        'A'   unchanged F order if input is F and not C, otherwise C order\n        'C'   C order   C order\n        'F'   F order   F order\n        ===== ========= ===================================================\n    \n        When ``copy=False`` and a copy is made for other reasons, the result is\n        the same as if ``copy=True``, with some exceptions for 'A', see the\n        Notes section. The default order is 'K'.\n    subok : bool, optional\n        If True, then sub-classes will be passed-through, otherwise\n        the returned array will be forced to be a base-class array (default).\n    ndmin : int, optional\n        Specifies the minimum number of dimensions that the resulting\n        array should have.  Ones will be pre-pended to the shape as\n        needed to meet this requirement.\n    like : array_like\n        Reference object to allow the creation of arrays which are not\n        NumPy arrays. If an array-like passed in as ``like`` supports\n        the ``__array_function__`` protocol, the result will be defined\n        by it. In this case, it ensures the creation of an array object\n        compatible with that passed in via this argument.\n    \n        .. versionadded:: 1.20.0\n    \n    Returns\n    -------\n    out : ndarray\n        An array object satisfying the specified requirements.\n    \n    See Also\n    --------\n    empty_like : Return an empty array with shape and type of input.\n    ones_like : Return an array of ones with shape and type of input.\n    zeros_like : Return an array of zeros with shape and type of input.\n    full_like : Return a new array with shape of input filled with value.\n    empty : Return a new uninitialized array.\n    ones : Return a new array setting values to one.\n    zeros : Return a new array setting values to zero.\n    full : Return a new array of given shape filled with value.\n    \n    \n    Notes\n    -----\n    When order is 'A' and `object` is an array in neither 'C' nor 'F' order,\n    and a copy is forced by a change in dtype, then the order of the result is\n    not necessarily 'C' as expected. This is likely a bug.\n    \n    Examples\n    --------\n    &gt;&gt;&gt; np.array([1, 2, 3])\n    array([1, 2, 3])\n    \n    Upcasting:\n    \n    &gt;&gt;&gt; np.array([1, 2, 3.0])\n    array([ 1.,  2.,  3.])\n    \n    More than one dimension:\n    \n    &gt;&gt;&gt; np.array([[1, 2], [3, 4]])\n    array([[1, 2],\n           [3, 4]])\n    \n    Minimum dimensions 2:\n    \n    &gt;&gt;&gt; np.array([1, 2, 3], ndmin=2)\n    array([[1, 2, 3]])\n    \n    Type provided:\n    \n    &gt;&gt;&gt; np.array([1, 2, 3], dtype=complex)\n    array([ 1.+0.j,  2.+0.j,  3.+0.j])\n    \n    Data-type consisting of more than one element:\n    \n    &gt;&gt;&gt; x = np.array([(1,2),(3,4)],dtype=[('a','&lt;i4'),('b','&lt;i4')])\n    &gt;&gt;&gt; x['a']\n    array([1, 3])\n    \n    Creating an array from sub-classes:\n    \n    &gt;&gt;&gt; np.array(np.mat('1 2; 3 4'))\n    array([[1, 2],\n           [3, 4]])\n    \n    &gt;&gt;&gt; np.array(np.mat('1 2; 3 4'), subok=True)\n    matrix([[1, 2],\n            [3, 4]])\n\n\n\nPandas is a library to work with dataframe objects. Dataframes are a way to represent data in rows and columns, much like a matrix!!\nA little vocab to get us started. I promise it won’t be much. - The columns of a dataframe are called the columns - The rows of the dataframe are called the index\nSee that wasn’t too bad :)\nLast week we discussed importing data from a csv file into a pandas dataframe. We are going to bring that back and do a whole lot more with it this week! We have provided a SampleData_VenturiTube.xlsx file in this week’s content for this demonstration!\n\n\n\n\nLocate place the file titled SampleData_VenturiTube.xlsx in the same folder as this jupyter notebook file\nCopy Path or Filenmake to Clipboard; you may have to append .xlsx to the file name.\nEstablish a filename variable in a code cell that is an empty string using filename = '' as show in the cell below\nInside the quotes paste the path using Ctrl+V or Cmd+V on your keyboard\nYou should now have something like this: filename = 'SampleData_VenturiTube.xlsx'\nFinally, use data = pd.ExcelFile(filename) to save your file into a pandas dataframe!\n\nToday’s DemoCSV1.csv originally comes from the module vega_datasets if you are curious.\n\nfilename = 'SampleData_VenturiTube.xlsx'\ndata = pd.ExcelFile(filename)\ndf1 = pd.read_excel(data, 'Table1')\ndf2 = pd.read_excel(data, 'Table2')\ndf3 = pd.read_excel(data, 'Table3')\n\n\n\n\n\nTo show dataframes, we have a couple of options! First we can use what we did last week using the display(df) function which operates similarly to print(). We can also use df.head() and df.tail() which will just show parts of the frame. The .head(n) shows the first n lines of the frame, and the .tail(m) shows the last m lines of the frame\nLet’s try these out!\n\ndisplay(df1)\n\n\n\n\n\n\n\n\n(d_2/d_1)\n0.6153846154\nUnnamed: 2\nUnnamed: 3\nUnnamed: 4\nUnnamed: 5\nUnnamed: 6\n\n\n\n\n0\nTapping\nl (mm)\nd (mm)\nA (mm^2)\nd_2/d_n\nA_2/A_n\nIdeal dim-less pressure\n\n\n1\nA (upstream, h_1)\n-54\n26\n530.929158\n0.615385\n0.378698\n0\n\n\n2\nB\n-34\n23.2\n422.732708\n0.689655\n0.475624\n-0.082806\n\n\n3\nC\n-22\n18.4\n265.904402\n0.869565\n0.756144\n-0.428341\n\n\n4\nD (throat, h_2)\n-8\n16\n201.06193\n1\n1\n-0.856588\n\n\n5\nE\n7\n16.79\n221.406962\n0.952948\n0.90811\n-0.681252\n\n\n6\nF\n22\n18.47\n267.931436\n0.86627\n0.750423\n-0.419722\n\n\n7\nG\n37\n20.16\n319.20592\n0.793651\n0.629882\n-0.253338\n\n\n8\nH\n52\n21.84\n374.623614\n0.732601\n0.536704\n-0.144639\n\n\n9\nJ\n67\n23.53\n434.844254\n0.679983\n0.462377\n-0.07038\n\n\n10\nK\n82\n25.21\n499.155169\n0.634669\n0.402804\n-0.018839\n\n\n11\nL\n102\n26\n530.929158\n0.615385\n0.378698\n0\n\n\n\n\n\n\n\n\ndf1.head(4)\n\n\n\n\n\n\n\n\n(d_2/d_1)\n0.6153846154\nUnnamed: 2\nUnnamed: 3\nUnnamed: 4\nUnnamed: 5\nUnnamed: 6\n\n\n\n\n0\nTapping\nl (mm)\nd (mm)\nA (mm^2)\nd_2/d_n\nA_2/A_n\nIdeal dim-less pressure\n\n\n1\nA (upstream, h_1)\n-54\n26\n530.929158\n0.615385\n0.378698\n0\n\n\n2\nB\n-34\n23.2\n422.732708\n0.689655\n0.475624\n-0.082806\n\n\n3\nC\n-22\n18.4\n265.904402\n0.869565\n0.756144\n-0.428341\n\n\n\n\n\n\n\n\ndf1.tail(4)\n\n\n\n\n\n\n\n\n(d_2/d_1)\n0.6153846154\nUnnamed: 2\nUnnamed: 3\nUnnamed: 4\nUnnamed: 5\nUnnamed: 6\n\n\n\n\n8\nH\n52\n21.84\n374.623614\n0.732601\n0.536704\n-0.144639\n\n\n9\nJ\n67\n23.53\n434.844254\n0.679983\n0.462377\n-0.07038\n\n\n10\nK\n82\n25.21\n499.155169\n0.634669\n0.402804\n-0.018839\n\n\n11\nL\n102\n26\n530.929158\n0.615385\n0.378698\n0\n\n\n\n\n\n\n\n\n#Just to showcase it, let's use help(df.tail)\nhelp(df1.tail)\n\nHelp on method tail in module pandas.core.generic:\n\ntail(n: 'int' = 5) -&gt; 'NDFrameT' method of pandas.core.frame.DataFrame instance\n    Return the last `n` rows.\n    \n    This function returns last `n` rows from the object based on\n    position. It is useful for quickly verifying data, for example,\n    after sorting or appending rows.\n    \n    For negative values of `n`, this function returns all rows except\n    the first `n` rows, equivalent to ``df[n:]``.\n    \n    Parameters\n    ----------\n    n : int, default 5\n        Number of rows to select.\n    \n    Returns\n    -------\n    type of caller\n        The last `n` rows of the caller object.\n    \n    See Also\n    --------\n    DataFrame.head : The first `n` rows of the caller object.\n    \n    Examples\n    --------\n    &gt;&gt;&gt; df = pd.DataFrame({'animal': ['alligator', 'bee', 'falcon', 'lion',\n    ...                    'monkey', 'parrot', 'shark', 'whale', 'zebra']})\n    &gt;&gt;&gt; df\n          animal\n    0  alligator\n    1        bee\n    2     falcon\n    3       lion\n    4     monkey\n    5     parrot\n    6      shark\n    7      whale\n    8      zebra\n    \n    Viewing the last 5 lines\n    \n    &gt;&gt;&gt; df.tail()\n       animal\n    4  monkey\n    5  parrot\n    6   shark\n    7   whale\n    8   zebra\n    \n    Viewing the last `n` lines (three in this case)\n    \n    &gt;&gt;&gt; df.tail(3)\n      animal\n    6  shark\n    7  whale\n    8  zebra\n    \n    For negative values of `n`\n    \n    &gt;&gt;&gt; df.tail(-3)\n       animal\n    3    lion\n    4  monkey\n    5  parrot\n    6   shark\n    7   whale\n    8   zebra\n\n\n\n\n\n\nAn m x n matrix has m rows and n columns. A dataframe also has rows and columns! Let’s get the shape of the dataframe using df1.shape\ndf1.shape will return the (number_of_rows, number_of_columns)\n\ndf1.shape\n\n(12, 7)\n\n\n\ndf2.shape\n\n(15, 5)\n\n\n\ndf3.shape\n\n(15, 5)\n\n\n\n\n\n\n\nUsing the df1.iloc['Row', 'Column'] function we can locate certain data.\nLast week we used this for plotting. We will get to that in a second. Let’s pull out all the data starting with row-index 1 and column-index 1 in the dataframe df1.\n\nx_values = df1.iloc[1:,1]\n\n\nx_values\n\n1     -54\n2     -34\n3     -22\n4      -8\n5       7\n6      22\n7      37\n8      52\n9      67\n10     82\n11    102\nName: 0.6153846154, dtype: object\n\n\n\nideal_dimLess_pressure = df1.iloc[1:,6]\n\n\nideal_dimLess_pressure \n\n1            0\n2    -0.082806\n3    -0.428341\n4    -0.856588\n5    -0.681252\n6    -0.419722\n7    -0.253338\n8    -0.144639\n9     -0.07038\n10   -0.018839\n11           0\nName: Unnamed: 6, dtype: object\n\n\n\n\n\nUsing the df2.iloc['Row', 'Column'] function we can locate certain data.\nLast week we used this for plotting. We will get to that in a second. Let’s pull out all the data starting with row-index 4 and column-index 4 in the dataframe df2.\n\nactualQ1_dimLess_pressure = df2.iloc[4:,4]\n\n\nactualQ1_dimLess_pressure\n\n4            0\n5    -0.070246\n6    -0.477676\n7    -1.137993\n8    -0.983451\n9    -0.660317\n10   -0.491725\n11   -0.379331\n12   -0.309084\n13   -0.280986\n14   -0.238838\nName: Unnamed: 4, dtype: object\n\n\n\n\n\nUsing the df3.iloc['Row', 'Column'] function we can locate certain data.\nLast week we used this for plotting. We will get to that in a second. Let’s pull out all the data starting with row-index 4 and column-index 4 in the dataframe df3.\n\nactualQ2_dimLess_pressure = df3.iloc[4:,4]\n\n\nactualQ2_dimLess_pressure\n\n4            0\n5    -0.048272\n6    -0.379283\n7    -0.917176\n8    -0.827527\n9    -0.565477\n10   -0.413763\n11   -0.317219\n12    -0.26205\n13    -0.22757\n14   -0.199986\nName: Unnamed: 4, dtype: object\n\n\n\n\n\n\nMatplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.\nSource: https://matplotlib.org\nA figure is just a place for our plots to exist. A figure can have multiple subplots which are arranged like a matrix in rows and columns. Each subplot is called an axis. Let’s play around with the subplots feature a little bit\nTo create a set of axes, use the function:\nfig, axs = plt.subplots(num_of_rows, number_of_columns, figsize=(width, height))\nLet’s break this down a little at a time.\n\n#set up our single subplot!\nfig, ax = plt.subplots(figsize=(8,8))\n\n#let's establish the x-axis with the variable \"x_values\"\n\n#And establish our y-axis values with the following variables:\n#ideal_dimLess_pressure\n#actualQ1_dimLess_pressure\n#actualQ2_dimLess_pressure\n\n# red dashes, blue dots and green triangles\nax.plot(x_values, ideal_dimLess_pressure, color='r', linestyle='--', label='Ideal')\nax.plot(x_values, actualQ1_dimLess_pressure, color='b', marker='s', label='Actual-Q1') \nax.plot(x_values, actualQ2_dimLess_pressure, 'g^', label='Actual-Q2') \n\n#and lets get a little fancy an add some labeling\nax.set_xlabel('Location on the datum line &lt;mm&gt;', fontsize=12)\nax.set_ylabel('Dimensionless pressure &lt;-&gt;', fontsize=12)\n\n#and maybe a title for our plot\nax.set_title('Venturi tube experimental data', fontsize=14)\n\n#ax.text(x, y) just puts a textbox at this coordinate\n#ax.text(1, 45, 'Look I can type in here too!!')\n\n#ax.axis([x1, x2, y1, y2]) limits the view we want to see\nax.axis([-60, 110, -1.2, 0.2])\n\n#ax.grid() adds a grid to the plot\nax.grid()\n\n#ax.lengend() adds a legend (and finally a semi-colon to eliminate the default printing)\nax.legend();\n\n\n\n\n\n\n\n\n\n\n\nNote that fig is the variable assigned to the plot above. Review the cell with the plotting code. The following line of code will save the above plot in the same working directory where the the jupyter notebook was saved.\n\nfig.savefig('Bulusu_Bengisu-Bera-Niazi-Truemper_LawFirm.png')\n\n\n\n\n\n\n\nUse the excel formatted template to input your own data gathered in the lab\nTry adapting this Python code to plot your own data from lab.\nReplace the data in this code with your own experimental data,\nAssign your own file names for the data you gathered in the lab,\nProvide your own legend, variable names etc.\n\n\n\n\n\n\n\n   Created in Deepnote"
   },
   {
-    "objectID": "realvnc-windows.html",
-    "href": "realvnc-windows.html",
-    "title": "RealVNC Installation Guide for Windows",
+    "objectID": "documents/Lab_VenturiTube/VentureCode_SampleData.html#matplotlib-pyplot-figures-and-subplots",
+    "href": "documents/Lab_VenturiTube/VentureCode_SampleData.html#matplotlib-pyplot-figures-and-subplots",
+    "title": "MAE 3127 - Fall 2025",
     "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Windows computer to enable remote desktop access."
+    "text": "Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.\nSource: https://matplotlib.org\nA figure is just a place for our plots to exist. A figure can have multiple subplots which are arranged like a matrix in rows and columns. Each subplot is called an axis. Let’s play around with the subplots feature a little bit\nTo create a set of axes, use the function:\nfig, axs = plt.subplots(num_of_rows, number_of_columns, figsize=(width, height))\nLet’s break this down a little at a time.\n\n#set up our single subplot!\nfig, ax = plt.subplots(figsize=(8,8))\n\n#let's establish the x-axis with the variable \"x_values\"\n\n#And establish our y-axis values with the following variables:\n#ideal_dimLess_pressure\n#actualQ1_dimLess_pressure\n#actualQ2_dimLess_pressure\n\n# red dashes, blue dots and green triangles\nax.plot(x_values, ideal_dimLess_pressure, color='r', linestyle='--', label='Ideal')\nax.plot(x_values, actualQ1_dimLess_pressure, color='b', marker='s', label='Actual-Q1') \nax.plot(x_values, actualQ2_dimLess_pressure, 'g^', label='Actual-Q2') \n\n#and lets get a little fancy an add some labeling\nax.set_xlabel('Location on the datum line &lt;mm&gt;', fontsize=12)\nax.set_ylabel('Dimensionless pressure &lt;-&gt;', fontsize=12)\n\n#and maybe a title for our plot\nax.set_title('Venturi tube experimental data', fontsize=14)\n\n#ax.text(x, y) just puts a textbox at this coordinate\n#ax.text(1, 45, 'Look I can type in here too!!')\n\n#ax.axis([x1, x2, y1, y2]) limits the view we want to see\nax.axis([-60, 110, -1.2, 0.2])\n\n#ax.grid() adds a grid to the plot\nax.grid()\n\n#ax.lengend() adds a legend (and finally a semi-colon to eliminate the default printing)\nax.legend();"
   },
   {
-    "objectID": "realvnc-windows.html#prerequisites",
-    "href": "realvnc-windows.html#prerequisites",
-    "title": "RealVNC Installation Guide for Windows",
+    "objectID": "documents/Lab_VenturiTube/VentureCode_SampleData.html#save-the-above-plot-as-a-png-file",
+    "href": "documents/Lab_VenturiTube/VentureCode_SampleData.html#save-the-above-plot-as-a-png-file",
+    "title": "MAE 3127 - Fall 2025",
+    "section": "",
+    "text": "Note that fig is the variable assigned to the plot above. Review the cell with the plotting code. The following line of code will save the above plot in the same working directory where the the jupyter notebook was saved.\n\nfig.savefig('Bulusu_Bengisu-Bera-Niazi-Truemper_LawFirm.png')"
+  },
+  {
+    "objectID": "documents/Lab_VenturiTube/VentureCode_SampleData.html#now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data",
+    "href": "documents/Lab_VenturiTube/VentureCode_SampleData.html#now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data",
+    "title": "MAE 3127 - Fall 2025",
+    "section": "",
+    "text": "Use the excel formatted template to input your own data gathered in the lab\nTry adapting this Python code to plot your own data from lab.\nReplace the data in this code with your own experimental data,\nAssign your own file names for the data you gathered in the lab,\nProvide your own legend, variable names etc.\n\n\n\n\n\n\n\n   Created in Deepnote"
+  },
+  {
+    "objectID": "realvnc-mac.html",
+    "href": "realvnc-mac.html",
+    "title": "RealVNC Installation Guide for Mac",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Macintosh computer to enable remote desktop access."
+  },
+  {
+    "objectID": "realvnc-mac.html#prerequisites",
+    "href": "realvnc-mac.html#prerequisites",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Windows computer running a supported version of Windows (e.g., Windows 10, Windows 8, Windows 7).\nInternet access."
+    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Macintosh computer running a supported version of MacOS (e.g., MacOS 12+).\nInternet access."
   },
   {
-    "objectID": "realvnc-windows.html#installation-steps",
-    "href": "realvnc-windows.html#installation-steps",
-    "title": "RealVNC Installation Guide for Windows",
+    "objectID": "realvnc-mac.html#installation-steps",
+    "href": "realvnc-mac.html#installation-steps",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "Installation Steps",
-    "text": "Installation Steps\n\n0. Download the installation file here\n\n\n1. Install VNC Viewer\nLocate the downloaded installer file (e.g., VNC-Viewer-*.exe) and double-click it to run the installer. Once the installation is complete, click “Finish” to exit the installer.\n\n\n\nOpen Installer\n\n\n\n\n\nRun Installer\n\n\n\n\n3. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Click on “Customize installation” and “Deselect RealVNC Server” and hit “Install”.\n\n\n\nSelect English as the peferred language\n\n\n\n\n\nClick on Next\n\n\n\n\n\nAccept terms and conditions, and click Next.\n\n\n\n\n\nSelect installation location\n\n\n\n\n\nClick on Install\n\n\n\n\n\nFinish installation\n\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Start.\n\n\n\nOpen RealVNC\n\n\n\n\n\nWhen prompted click on “Sign in to get Started and hit cancel button\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nHit Cancel button"
+    "text": "Installation Steps\n\n\n0. Download the installation file here\n\n\n1. Install RealVNC Viewer:\nLocate the downloaded installer file (usually in your Downloads folder) and double-click on it to start the installation process and click on “Allow” when prompted.\n\n\n\nRun Installer\n\n\n\n\n\n2. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Move the VNC Viewer to Applications to finish the installation. \n\n\n\nMove VNC Viewer to Applications\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Launchpad.\n\n\n\n\nOpen RealVNC from Launchpad\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up"
   },
   {
-    "objectID": "instructor.html#dr.-kartik-bulusu-instructor",
-    "href": "instructor.html#dr.-kartik-bulusu-instructor",
-    "title": "Instruction Team",
-    "section": "Dr. Kartik Bulusu (Instructor)",
-    "text": "Dr. Kartik Bulusu (Instructor)\n\n\n\nDr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee, William and Louise Corcoron Award for contributing to the intellectual and social life and the Bender award for teaching excellence in the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 4615\nEmail: bulusu at email dot gwu dot edu",
-    "crumbs": [
-      "Instruction Team"
-    ]
-  },
-  {
-    "objectID": "instructor.html#bengisu-sisik-graduate-teaching-assistant",
-    "href": "instructor.html#bengisu-sisik-graduate-teaching-assistant",
-    "title": "Instruction Team",
-    "section": "Bengisu Sisik (Graduate Teaching Assistant)",
-    "text": "Bengisu Sisik (Graduate Teaching Assistant)\n\n\n\nBengisu Sisik is a Ph.D. candidate in Mechanical and Aerospace Engineering at The George Washington University, specializing in additive manufacturing of thermoelectric semiconductor materials. Her research focuses on process–structure–property relationships during laser powder bed fusion, leveraging high-performance computing and advanced simulation tools to design sustainable energy solutions. She has published in Nature Energy and actively engages in interdisciplinary initiatives at the intersection of materials science, energy, and data-driven modeling.\nBeyond research, she is a Graduate Ambassador at GWU, mentoring new students and fostering inclusivity in STEM. She also serves as the Inaugural Chair of the American Society of Thermal and Fluids Engineers (ASTFE) Student Committee, where she encourages every student with an interest in thermal and fluids sciences to join the community. Outside of work, Bengisu enjoys exploring new cities, practicing yoga, and playing tennis. She also warmly invites anyone interested to visit Turkey.\n\n\n\n\nOffice hours and Location: TBA\nEmail: bengisusisik at gwu dot edu\nLinkedIn",
-    "crumbs": [
-      "Instruction Team"
-    ]
-  },
-  {
-    "objectID": "instructor.html#swastika-bera-graduate-teaching-assistant",
-    "href": "instructor.html#swastika-bera-graduate-teaching-assistant",
-    "title": "Instruction Team",
-    "section": "Swastika Bera (Graduate Teaching Assistant)",
-    "text": "Swastika Bera (Graduate Teaching Assistant)\n\n\n\nSwastika Bera is a Ph.D. student in the Department of Mechanical and Aerospace Engineering at The George Washington University, specializing in fluid mechanics and soft matter systems. Her research investigates the deformation, breakup, and particle tracking of extracellular polymeric substances (EPS), xanthan gum, and marine snow aggregates under laminar and turbulent flows. By combining experimental fluid dynamics, rheology, and advanced imaging, she explores how turbulence controls particle aggregation and carbon transport between the surface and mesopelagic ocean layers.\nPrior to her doctoral studies, she completed her M.S. in Mechanical Engineering at South Dakota State University, where she developed corn kernel–based biocomposite films for sustainable food packaging applications. This work advanced environmentally friendly alternatives to petroleum-based plastics through the integration of natural fibers and biopolymers.\nBeyond research, Swastika has presented her work at the American Physical Society and the AGU Ocean Sciences meeting. She is passionate about bridging fundamental fluid mechanics with environmentally friendly polymer applications that address global sustainability challenges. Outside of academics, she enjoys cooking, exploring new places, and reading comics.\n\n\n\nOffice hours and Location: TBA\nEmail: swastika.bera at gwu dot edu\nLinkedIn",
-    "crumbs": [
-      "Instruction Team"
-    ]
-  },
-  {
-    "objectID": "instructor.html#salman-niazi-undergraduate-teaching-assistant",
-    "href": "instructor.html#salman-niazi-undergraduate-teaching-assistant",
-    "title": "Instruction Team",
-    "section": "Salman Niazi (Undergraduate Teaching Assistant)",
-    "text": "Salman Niazi (Undergraduate Teaching Assistant)\n\n\n\nSalman Niazi is a senior studying Mechanical and Aerospace Engineering at The George Washington University. He currently works as an undergraduate research assistant in the Micropropulsion and Nanotechnology Laboratory, where his focus is on air-breathing plasma thrusters and advanced propulsion systems. Salman has also gained industry experience through internships in the energy industry, where he worked on HVAC design and energy systems. Salman has previously been an Undergraduate Learning Assistant for the past two years and has loved every moment of it. He enjoys supporting students in and out of the classroom, fostering collaboration, and helping them gain confidence in tackling challenging concepts. Outside of class, Salman loves biking, exploring new cafes, and discussing emerging technologies.\n\n\n \nOffice hours and Location: TBA\nEmail: salmank437 at gwmail dot gwu dot edu\n[LinkedIn] TBA",
-    "crumbs": [
-      "Instruction Team"
-    ]
-  },
-  {
-    "objectID": "instructor.html#lucy-truemper-learning-assistant",
-    "href": "instructor.html#lucy-truemper-learning-assistant",
-    "title": "Instruction Team",
-    "section": "Lucy Truemper (Learning Assistant)",
-    "text": "Lucy Truemper (Learning Assistant)\n\n\n\nLucy Truemper is in her fourth and last year at The George Washington University studying for her undergraduate degree in civil engineering with a concentration in environmental engineering. Lucy is currently assisting in research for the mechanical and aerospace engineering department at GWU doing materials testing for model sea lion flippers to better understand how flexibility parameters affect the flow fields of sea lion flippers. Outside of classes, Lucy is a Co-Captain for the GWU student steel bridge team where she applies her understanding of structural engineering and leads a fabrication team. She is originally from Washington state where natural water sources are abundant which has maintained her interest in fields related to fluid mechanics, water treatment, and hydraulics.\n\n\n \nOffice hours and Location: TBA\nEmail: lucytruemper at gwmail dot gwu dot edu\n[LinkedIn]TBA",
-    "crumbs": [
-      "Instruction Team"
-    ]
-  },
-  {
-    "objectID": "thingspeak.html",
-    "href": "thingspeak.html",
-    "title": "Creating a ThingSpeak Account",
-    "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
-  },
-  {
-    "objectID": "thingspeak.html#steps-to-create-your-thingspeak-account",
-    "href": "thingspeak.html#steps-to-create-your-thingspeak-account",
-    "title": "Creating a ThingSpeak Account",
-    "section": "Steps to Create Your ThingSpeak Account",
-    "text": "Steps to Create Your ThingSpeak Account\nThingSpeak is a platform for the Internet of Things (IoT) that allows you to collect, analyze, and visualize data from sensors. Follow these steps to create your account:\n\n1. Access the MathWorks Sign-In Page\nNavigate to the MathWorks sign-in page. You’ll see a form similar to this:\n\n\n\nMathWorks sign-in page\n\n\n\n\n2. Create a New Account\nIf you don’t have an account, click on “Create one!” to start the account creation process.\n\n\n\nCreate MathWorks Account\n\n\nFill in your details, including your email address, location, and name.\n\n\n3. Use Your Work or University Email\nFor accessing your organization’s MATLAB license, it’s recommended to use your work or university email.\n\n\n\nPersonal Email Detected\n\n\nIf you entered a personal email, you may see a warning. You can choose to continue with your personal email or switch to a work/university email.\n\n\n4. Verify Your Email\nAfter submitting your information, you’ll need to verify your email address.\n\n\n\nVerify Your MathWorks Account\n\n\nCheck your inbox for the verification email and follow the link provided.\n\n\n5. Complete Your Profile\nThe final step is to set up your password and accept the terms of service.\n\n\n\nFinish Your Profile\n\n\nCreate a strong password and make sure to check the box to accept the Online Services Agreement.\n\n\n6. Access ThingSpeak\nOnce your MathWorks account is set up, you can use these credentials to log into ThingSpeak and start your IoT projects!\nRemember, ThingSpeak offers powerful tools for data aggregation and analytics, allowing you to connect smart devices and develop algorithms for sensor analytics using MATLAB."
-  },
-  {
-    "objectID": "realvnc-mac-connect.html",
-    "href": "realvnc-mac-connect.html",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
-  },
-  {
-    "objectID": "realvnc-mac-connect.html#prerequisites",
-    "href": "realvnc-mac-connect.html#prerequisites",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure that you have already installed RealVNC on your Mac."
-  },
-  {
-    "objectID": "realvnc-mac-connect.html#establish-a-connection",
-    "href": "realvnc-mac-connect.html#establish-a-connection",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
-    "section": "Establish a Connection",
-    "text": "Establish a Connection\n\n1. Launch RealVNC Viewer\nLaunch VNC Viewer from the Launchpad.\n\n\n\nOpen RealVNC Viewer\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up\n\n\n\n\n2. Connect to a Raspberry Pi\nTo connect to a Raspberry Pi, launch RealVNC Viewer, enter the “raspberrypi.local” on the box into the address bar, and hit Enter. You may need to enter the login credentials for the Raspberry Pi.\n\n\n\n\nConnect to the Pi\n\n\n\n\n\n3. Enjoy Remote Desktop Access\nYou are now connected to the Raspberry Pi, and you can control it.\n\n\n\nRemote Connection Successfull\n\n\n\n\n4. Disconnect\nTo disconnect from the Raspberry Pi, simply close the VNC Viewer window."
-  },
-  {
-    "objectID": "realvnc-mac-connect.html#conclusion",
-    "href": "realvnc-mac-connect.html#conclusion",
-    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "objectID": "realvnc-mac.html#conclusion",
+    "href": "realvnc-mac.html#conclusion",
+    "title": "RealVNC Installation Guide for Mac",
     "section": "Conclusion",
-    "text": "Conclusion\nYou have successfully established connection to the Pi, allowing you to access and control it with ease.\nFor more information and support, you can visit the RealVNC website."
-  },
-  {
-    "objectID": "guidelines.html",
-    "href": "guidelines.html",
-    "title": "Course guidelines and student responsibilities",
-    "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\nWe ask that all attendees adhere to the following workshop guidelines and responsibilities while attending:"
-  },
-  {
-    "objectID": "guidelines.html#justice-equity-diversity-inclusion-jedi-statement",
-    "href": "guidelines.html#justice-equity-diversity-inclusion-jedi-statement",
-    "title": "Course guidelines and student responsibilities",
-    "section": "Justice, Equity, Diversity, Inclusion (JEDI) statement",
-    "text": "Justice, Equity, Diversity, Inclusion (JEDI) statement\n\n\n\nThe instructor intends to facilitates learning for students from all diverse backgrounds and perspectives by this course. The diversity that the attendees bring to this workshop is viewed as a resource, strength, and benefit. The workshop materials and activities presented are intended to be respectful of: age, race, ethnicity, country of origin, language, religion, spiritual practice, sexual orientation, gender identity or expression, introversion/extroversion personality dimensions, and socioeconomic and mental/physical status.\n\n\n\n \n\nemployee diversity by Bold Yellow from Noun Project\n\n\n\n\nPlease let the main instructor know ways to improve the effectiveness of the course."
-  },
-  {
-    "objectID": "guidelines.html#use-of-chatgpt-or-any-other-ai-based-models-workshop",
-    "href": "guidelines.html#use-of-chatgpt-or-any-other-ai-based-models-workshop",
-    "title": "Course guidelines and student responsibilities",
-    "section": "Use of chatGPT or any other AI-based models workshop",
-    "text": "Use of chatGPT or any other AI-based models workshop\nThe use chatGPT or any other genreative AI-based tool is NOT PERMITTED.\nThe use chatGPT or any other AI-based models will be explicitly permitted by the instructor on select assignments and programming projects. In all other instances where a course deliverable does not entail permitted use of chatGPT or any other AI-based models, the instructors will have the students sign a disclosure form. This form will require that the students document specific prompts used and the outputs generated.\nFurthermore, the ethical issues regarding the use of chatGPT or any other AI-based models will be discussed in-class and course policy will be ammended according to the findings. The findings of any such discussions will be summarized and placed in-context of the Academic Integrity Code\n Resources that will guide the course policy changes during the course: \n\n\nchatGPT Course policy formulation\n\n\nchatGPT chatbot\n\n\nHow ChatGPT Could Transform Higher Education\n\n–&gt;"
-  },
-  {
-    "objectID": "guidelines.html#use-of-electronic-course-materials-and-class-recordings",
-    "href": "guidelines.html#use-of-electronic-course-materials-and-class-recordings",
-    "title": "Course guidelines and student responsibilities",
-    "section": "Use of Electronic Course Materials and Class Recordings",
-    "text": "Use of Electronic Course Materials and Class Recordings\nStudents are encouraged to use electronic course materials, including recorded class sessions (if any), for private personal use in connection with their academic program of study. Electronic course materials and recorded class sessions should not be shared or used for non-course related purposes unless express permission has been granted by the instructor. Students who impermissibly share any electronic course materials are subject to discipline under the Student Code of Conduct. Please contact the instructor if you have questions regarding what constitutes permissible or impermissible use of electronic course materials and/or recorded class sessions. Please contact Disability Support Services if you have questions or need assistance in accessing electronic course materials. –&gt;"
-  },
-  {
-    "objectID": "guidelines.html#university-policy-on-religious-holidays",
-    "href": "guidelines.html#university-policy-on-religious-holidays",
-    "title": "Course guidelines and student responsibilities",
-    "section": "University Policy on Religious Holidays",
-    "text": "University Policy on Religious Holidays\n\nStudents should notify faculty during the first week of the semester of their intention to be absent from class on their day(s) of religious observance.\nFaculty should extend to these students the courtesy of absence without penalty on such occasions, including permission to make up examinations.\nFaculty who intend to observe a religious holiday should arrange at the beginning of the semester to reschedule missed classes or to make other provisions for their course‐related activities.\n\nFor details and policy, see “Religious Holidays” at https://provost.gwu.edu/policies-procedures-and-guidelines"
-  },
-  {
-    "objectID": "objectives.html",
-    "href": "objectives.html",
-    "title": "Learning Objectives",
-    "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n Source: bernoulli by Ivan Novelo from Noun Project (CC BY 3.0)\n\nBy the end of the course, you should be able to\n\nDemonstrate an understanding of fluid properties including the measure of the property and its dependence on pressure and temperature.\nDemonstrate the ability to solve hydrostatic problems involving manometers, hydrostatic forces on planar and curved surfaces, and hydraulics.\nDemonstrate the ability to solve fluid dynamics problems involving conservation of mass, momentum, and energy for viscous and inviscid flow.\nDemonstrate an understanding of similitude and dimensional analysis. Correctly apply these concepts to fluids problems.\nDemonstrate an ability to apply mathematics and physics to problems involving fluid mechanics.\nDemonstrate the very basics of using a programming language like Python to visualize and analyze data\nDemonstrate an understanding and appreciation for engineering ethics via case studies and discussions.",
-    "crumbs": [
-      "Learning Objectives"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#course-description",
-    "href": "index.html#course-description",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "Course description",
-    "text": "Course description\n\n\n\n\n\n\n\n\n\n\n\n \n\n Sourece: fluid dynamics by M. Oki Orlando from Noun Project (CC BY 3.0)\n\nThis laboratory course teaches the following topics through experiments and recitations:\n\nUsage of basic of fluid properties, fluid statics\nLaboratory-based application of Integral and differential formulations of conservation of mass, momentum, and energy\nLaboratory-based application Bernoulli’s equation, dimensional analysis and similitude\nApplications of inviscid and viscous flow.\nExperiments and introductory-level Python Programming in fluid mechanics\nExposure to engineering ethics via case studies\n\n\n\n\n\n\n\n\nLocation & Time\n\n\n\nSEH B1200: Laboratory\nSEH B1280: Recitation\nMeeting times\n\nSection 31: Wednesday 11:10 AM - 12:25 PM\nSection 32: Wednesday 12:45 PM - 02:00 PM\nSection 30: Wednesday 03:45 PM - 05:00 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#additional-course-information",
-    "href": "index.html#additional-course-information",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "Additional Course Information",
-    "text": "Additional Course Information\n\nThe course outline presented on this webpage is subject to change depending on the pace of the class.  Pay attention to the location of each meeting. Sometimes you will be in the GW assigned classroom, and sometimes you will be in the Fluids Lab.\nThe attendees will be expected to bring their own laptops, books and writing instruments.\nThe students will be expected to work in small groups using a limited number of hardware components and WiFi connectivity that will be made available.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#course-prerequisites",
-    "href": "index.html#course-prerequisites",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "Course Prerequisites",
-    "text": "Course Prerequisites\nApSc 2058",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#audience-and-credit-level",
-    "href": "index.html#audience-and-credit-level",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "Audience and credit-level",
-    "text": "Audience and credit-level\nThe course is designed for junior-level undergraduate students as a 1-credit course.",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "index.html#textbook-hardware-and-other-course-material",
-    "href": "index.html#textbook-hardware-and-other-course-material",
-    "title": "Fluid Mechanics Laboratory",
-    "section": "Textbook, hardware and other course material",
-    "text": "Textbook, hardware and other course material\nThere is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor.",
-    "crumbs": [
-      "Home"
-    ]
+    "text": "Conclusion\nCongratulations! You have successfully installed RealVNC Viewer on your Macintosh machine, allowing you to access and control remote computers with ease.\nFor more information and support, you can visit the RealVNC FAQa."
   },
   {
     "objectID": "policies.html",
@@ -366,32 +194,232 @@
     ]
   },
   {
-    "objectID": "realvnc-mac.html",
-    "href": "realvnc-mac.html",
-    "title": "RealVNC Installation Guide for Mac",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Fluid Mechanics Laboratory",
     "section": "",
-    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Macintosh computer to enable remote desktop access."
+    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.",
+    "crumbs": [
+      "Home"
+    ]
   },
   {
-    "objectID": "realvnc-mac.html#prerequisites",
-    "href": "realvnc-mac.html#prerequisites",
-    "title": "RealVNC Installation Guide for Mac",
+    "objectID": "index.html#course-description",
+    "href": "index.html#course-description",
+    "title": "Fluid Mechanics Laboratory",
+    "section": "Course description",
+    "text": "Course description\n\n\n\n\n\n\n\n\n\n\n\n \n\n Sourece: fluid dynamics by M. Oki Orlando from Noun Project (CC BY 3.0)\n\nThis laboratory course teaches the following topics through experiments and recitations:\n\nUsage of basic of fluid properties, fluid statics\nLaboratory-based application of Integral and differential formulations of conservation of mass, momentum, and energy\nLaboratory-based application Bernoulli’s equation, dimensional analysis and similitude\nApplications of inviscid and viscous flow.\nExperiments and introductory-level Python Programming in fluid mechanics\nExposure to engineering ethics via case studies\n\n\n\n\n\n\n\n\nLocation & Time\n\n\n\nSEH B1200: Laboratory\nSEH B1280: Recitation\nMeeting times\n\nSection 31: Wednesday 11:10 AM - 12:25 PM\nSection 32: Wednesday 12:45 PM - 02:00 PM\nSection 30: Wednesday 03:45 PM - 05:00 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#additional-course-information",
+    "href": "index.html#additional-course-information",
+    "title": "Fluid Mechanics Laboratory",
+    "section": "Additional Course Information",
+    "text": "Additional Course Information\n\nThe course outline presented on this webpage is subject to change depending on the pace of the class.  Pay attention to the location of each meeting. Sometimes you will be in the GW assigned classroom, and sometimes you will be in the Fluids Lab.\nThe attendees will be expected to bring their own laptops, books and writing instruments.\nThe students will be expected to work in small groups using a limited number of hardware components and WiFi connectivity that will be made available.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#course-prerequisites",
+    "href": "index.html#course-prerequisites",
+    "title": "Fluid Mechanics Laboratory",
+    "section": "Course Prerequisites",
+    "text": "Course Prerequisites\nApSc 2058",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#audience-and-credit-level",
+    "href": "index.html#audience-and-credit-level",
+    "title": "Fluid Mechanics Laboratory",
+    "section": "Audience and credit-level",
+    "text": "Audience and credit-level\nThe course is designed for junior-level undergraduate students as a 1-credit course.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html#textbook-hardware-and-other-course-material",
+    "href": "index.html#textbook-hardware-and-other-course-material",
+    "title": "Fluid Mechanics Laboratory",
+    "section": "Textbook, hardware and other course material",
+    "text": "Textbook, hardware and other course material\nThere is no textbook requirement for this course. All reading, hardware and course material will be provided by the instructor.",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "objectives.html",
+    "href": "objectives.html",
+    "title": "Learning Objectives",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n Source: bernoulli by Ivan Novelo from Noun Project (CC BY 3.0)\n\nBy the end of the course, you should be able to\n\nDemonstrate an understanding of fluid properties including the measure of the property and its dependence on pressure and temperature.\nDemonstrate the ability to solve hydrostatic problems involving manometers, hydrostatic forces on planar and curved surfaces, and hydraulics.\nDemonstrate the ability to solve fluid dynamics problems involving conservation of mass, momentum, and energy for viscous and inviscid flow.\nDemonstrate an understanding of similitude and dimensional analysis. Correctly apply these concepts to fluids problems.\nDemonstrate an ability to apply mathematics and physics to problems involving fluid mechanics.\nDemonstrate the very basics of using a programming language like Python to visualize and analyze data\nDemonstrate an understanding and appreciation for engineering ethics via case studies and discussions.",
+    "crumbs": [
+      "Learning Objectives"
+    ]
+  },
+  {
+    "objectID": "guidelines.html",
+    "href": "guidelines.html",
+    "title": "Course guidelines and student responsibilities",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\nWe ask that all attendees adhere to the following workshop guidelines and responsibilities while attending:"
+  },
+  {
+    "objectID": "guidelines.html#justice-equity-diversity-inclusion-jedi-statement",
+    "href": "guidelines.html#justice-equity-diversity-inclusion-jedi-statement",
+    "title": "Course guidelines and student responsibilities",
+    "section": "Justice, Equity, Diversity, Inclusion (JEDI) statement",
+    "text": "Justice, Equity, Diversity, Inclusion (JEDI) statement\n\n\n\nThe instructor intends to facilitates learning for students from all diverse backgrounds and perspectives by this course. The diversity that the attendees bring to this workshop is viewed as a resource, strength, and benefit. The workshop materials and activities presented are intended to be respectful of: age, race, ethnicity, country of origin, language, religion, spiritual practice, sexual orientation, gender identity or expression, introversion/extroversion personality dimensions, and socioeconomic and mental/physical status.\n\n\n\n \n\nemployee diversity by Bold Yellow from Noun Project\n\n\n\n\nPlease let the main instructor know ways to improve the effectiveness of the course."
+  },
+  {
+    "objectID": "guidelines.html#use-of-chatgpt-or-any-other-ai-based-models-workshop",
+    "href": "guidelines.html#use-of-chatgpt-or-any-other-ai-based-models-workshop",
+    "title": "Course guidelines and student responsibilities",
+    "section": "Use of chatGPT or any other AI-based models workshop",
+    "text": "Use of chatGPT or any other AI-based models workshop\nThe use chatGPT or any other genreative AI-based tool is NOT PERMITTED.\nThe use chatGPT or any other AI-based models will be explicitly permitted by the instructor on select assignments and programming projects. In all other instances where a course deliverable does not entail permitted use of chatGPT or any other AI-based models, the instructors will have the students sign a disclosure form. This form will require that the students document specific prompts used and the outputs generated.\nFurthermore, the ethical issues regarding the use of chatGPT or any other AI-based models will be discussed in-class and course policy will be ammended according to the findings. The findings of any such discussions will be summarized and placed in-context of the Academic Integrity Code\n Resources that will guide the course policy changes during the course: \n\n\nchatGPT Course policy formulation\n\n\nchatGPT chatbot\n\n\nHow ChatGPT Could Transform Higher Education\n\n–&gt;"
+  },
+  {
+    "objectID": "guidelines.html#use-of-electronic-course-materials-and-class-recordings",
+    "href": "guidelines.html#use-of-electronic-course-materials-and-class-recordings",
+    "title": "Course guidelines and student responsibilities",
+    "section": "Use of Electronic Course Materials and Class Recordings",
+    "text": "Use of Electronic Course Materials and Class Recordings\nStudents are encouraged to use electronic course materials, including recorded class sessions (if any), for private personal use in connection with their academic program of study. Electronic course materials and recorded class sessions should not be shared or used for non-course related purposes unless express permission has been granted by the instructor. Students who impermissibly share any electronic course materials are subject to discipline under the Student Code of Conduct. Please contact the instructor if you have questions regarding what constitutes permissible or impermissible use of electronic course materials and/or recorded class sessions. Please contact Disability Support Services if you have questions or need assistance in accessing electronic course materials. –&gt;"
+  },
+  {
+    "objectID": "guidelines.html#university-policy-on-religious-holidays",
+    "href": "guidelines.html#university-policy-on-religious-holidays",
+    "title": "Course guidelines and student responsibilities",
+    "section": "University Policy on Religious Holidays",
+    "text": "University Policy on Religious Holidays\n\nStudents should notify faculty during the first week of the semester of their intention to be absent from class on their day(s) of religious observance.\nFaculty should extend to these students the courtesy of absence without penalty on such occasions, including permission to make up examinations.\nFaculty who intend to observe a religious holiday should arrange at the beginning of the semester to reschedule missed classes or to make other provisions for their course‐related activities.\n\nFor details and policy, see “Religious Holidays” at https://provost.gwu.edu/policies-procedures-and-guidelines"
+  },
+  {
+    "objectID": "realvnc-mac-connect.html",
+    "href": "realvnc-mac-connect.html",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+  },
+  {
+    "objectID": "realvnc-mac-connect.html#prerequisites",
+    "href": "realvnc-mac-connect.html#prerequisites",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
     "section": "Prerequisites",
-    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Macintosh computer running a supported version of MacOS (e.g., MacOS 12+).\nInternet access."
+    "text": "Prerequisites\nBefore you begin, ensure that you have already installed RealVNC on your Mac."
   },
   {
-    "objectID": "realvnc-mac.html#installation-steps",
-    "href": "realvnc-mac.html#installation-steps",
-    "title": "RealVNC Installation Guide for Mac",
-    "section": "Installation Steps",
-    "text": "Installation Steps\n\n\n0. Download the installation file here\n\n\n1. Install RealVNC Viewer:\nLocate the downloaded installer file (usually in your Downloads folder) and double-click on it to start the installation process and click on “Allow” when prompted.\n\n\n\nRun Installer\n\n\n\n\n\n2. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Move the VNC Viewer to Applications to finish the installation. \n\n\n\nMove VNC Viewer to Applications\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Launchpad.\n\n\n\n\nOpen RealVNC from Launchpad\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up"
+    "objectID": "realvnc-mac-connect.html#establish-a-connection",
+    "href": "realvnc-mac-connect.html#establish-a-connection",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
+    "section": "Establish a Connection",
+    "text": "Establish a Connection\n\n1. Launch RealVNC Viewer\nLaunch VNC Viewer from the Launchpad.\n\n\n\nOpen RealVNC Viewer\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nDon’t Sign up\n\n\n\n\n2. Connect to a Raspberry Pi\nTo connect to a Raspberry Pi, launch RealVNC Viewer, enter the “raspberrypi.local” on the box into the address bar, and hit Enter. You may need to enter the login credentials for the Raspberry Pi.\n\n\n\n\nConnect to the Pi\n\n\n\n\n\n3. Enjoy Remote Desktop Access\nYou are now connected to the Raspberry Pi, and you can control it.\n\n\n\nRemote Connection Successfull\n\n\n\n\n4. Disconnect\nTo disconnect from the Raspberry Pi, simply close the VNC Viewer window."
   },
   {
-    "objectID": "realvnc-mac.html#conclusion",
-    "href": "realvnc-mac.html#conclusion",
-    "title": "RealVNC Installation Guide for Mac",
+    "objectID": "realvnc-mac-connect.html#conclusion",
+    "href": "realvnc-mac-connect.html#conclusion",
+    "title": "Connect the Raspberry Pi on Macintosh machine",
     "section": "Conclusion",
-    "text": "Conclusion\nCongratulations! You have successfully installed RealVNC Viewer on your Macintosh machine, allowing you to access and control remote computers with ease.\nFor more information and support, you can visit the RealVNC FAQa."
+    "text": "Conclusion\nYou have successfully established connection to the Pi, allowing you to access and control it with ease.\nFor more information and support, you can visit the RealVNC website."
+  },
+  {
+    "objectID": "thingspeak.html",
+    "href": "thingspeak.html",
+    "title": "Creating a ThingSpeak Account",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University."
+  },
+  {
+    "objectID": "thingspeak.html#steps-to-create-your-thingspeak-account",
+    "href": "thingspeak.html#steps-to-create-your-thingspeak-account",
+    "title": "Creating a ThingSpeak Account",
+    "section": "Steps to Create Your ThingSpeak Account",
+    "text": "Steps to Create Your ThingSpeak Account\nThingSpeak is a platform for the Internet of Things (IoT) that allows you to collect, analyze, and visualize data from sensors. Follow these steps to create your account:\n\n1. Access the MathWorks Sign-In Page\nNavigate to the MathWorks sign-in page. You’ll see a form similar to this:\n\n\n\nMathWorks sign-in page\n\n\n\n\n2. Create a New Account\nIf you don’t have an account, click on “Create one!” to start the account creation process.\n\n\n\nCreate MathWorks Account\n\n\nFill in your details, including your email address, location, and name.\n\n\n3. Use Your Work or University Email\nFor accessing your organization’s MATLAB license, it’s recommended to use your work or university email.\n\n\n\nPersonal Email Detected\n\n\nIf you entered a personal email, you may see a warning. You can choose to continue with your personal email or switch to a work/university email.\n\n\n4. Verify Your Email\nAfter submitting your information, you’ll need to verify your email address.\n\n\n\nVerify Your MathWorks Account\n\n\nCheck your inbox for the verification email and follow the link provided.\n\n\n5. Complete Your Profile\nThe final step is to set up your password and accept the terms of service.\n\n\n\nFinish Your Profile\n\n\nCreate a strong password and make sure to check the box to accept the Online Services Agreement.\n\n\n6. Access ThingSpeak\nOnce your MathWorks account is set up, you can use these credentials to log into ThingSpeak and start your IoT projects!\nRemember, ThingSpeak offers powerful tools for data aggregation and analytics, allowing you to connect smart devices and develop algorithms for sensor analytics using MATLAB."
+  },
+  {
+    "objectID": "instructor.html#dr.-kartik-bulusu-instructor",
+    "href": "instructor.html#dr.-kartik-bulusu-instructor",
+    "title": "Instruction Team",
+    "section": "Dr. Kartik Bulusu (Instructor)",
+    "text": "Dr. Kartik Bulusu (Instructor)\n\n\n\nDr. Kartik V. Bulusu is an Associate Research Professor in the Department of Mechanical and Aerospace Engineering at The George Washington University, Washington DC.\nHe designed taught a cross-disciplinary course titled, Internet of Things (IoT) and Edge Computing with applications in cyber-physical systems and speech processing.\nIn addition, he developed courses for first year engineering students on the engineering applications of Raspberry Pi, Python programming and mobile App development inspired by social innovation potential during the COVID-19 pandemic.\nHis research interests span the areas of human health and sustainable energy with focus on mechanics of biological fluids, low-cost energy technologies and applications of wavelet transforms. His current research work on biofluid dynamics of the cardiovasculature, rheology of biological fluids and applications of wavelet transforms has been supported by NSF and the Center for Biomimetics and Bioinspired Engineering (CBBE), GWU.\nHe developed a wavelet transform-based computational code (PIVlet) for the analysis of complex vortical patterns encountered in arterial blood flow. He has extensive knowledge of experimental fluid mechanics and non-invasive measurement techniques such as laser Doppler velocimetry (LDV), particle image velocimetry (PIV), schlieren imagery, magnetic resonance velocimetry (MRV) and molecular tagging velocimetry (MTV). Dr. Bulusu was recognized with the ASME Best Paper Award by the Advanced Energy Systems Division (AESD) Heat Pump Technical Committee, William and Louise Corcoron Award for contributing to the intellectual and social life and the Bender award for teaching excellence in the School of Engineering and Applied Science, GWU.\n\n\n  Campus Address: SEH 4615\nEmail: bulusu at email dot gwu dot edu",
+    "crumbs": [
+      "Instruction Team"
+    ]
+  },
+  {
+    "objectID": "instructor.html#bengisu-sisik-graduate-teaching-assistant",
+    "href": "instructor.html#bengisu-sisik-graduate-teaching-assistant",
+    "title": "Instruction Team",
+    "section": "Bengisu Sisik (Graduate Teaching Assistant)",
+    "text": "Bengisu Sisik (Graduate Teaching Assistant)\n\n\n\nBengisu Sisik is a Ph.D. candidate in Mechanical and Aerospace Engineering at The George Washington University, specializing in additive manufacturing of thermoelectric semiconductor materials. Her research focuses on process–structure–property relationships during laser powder bed fusion, leveraging high-performance computing and advanced simulation tools to design sustainable energy solutions. She has published in Nature Energy and actively engages in interdisciplinary initiatives at the intersection of materials science, energy, and data-driven modeling.\nBeyond research, she is a Graduate Ambassador at GWU, mentoring new students and fostering inclusivity in STEM. She also serves as the Inaugural Chair of the American Society of Thermal and Fluids Engineers (ASTFE) Student Committee, where she encourages every student with an interest in thermal and fluids sciences to join the community. Outside of work, Bengisu enjoys exploring new cities, practicing yoga, and playing tennis. She also warmly invites anyone interested to visit Turkey.\n\n\n\n\nOffice hours and Location: TBA\nEmail: bengisusisik at gwu dot edu\nLinkedIn",
+    "crumbs": [
+      "Instruction Team"
+    ]
+  },
+  {
+    "objectID": "instructor.html#swastika-bera-graduate-teaching-assistant",
+    "href": "instructor.html#swastika-bera-graduate-teaching-assistant",
+    "title": "Instruction Team",
+    "section": "Swastika Bera (Graduate Teaching Assistant)",
+    "text": "Swastika Bera (Graduate Teaching Assistant)\n\n\n\nSwastika Bera is a Ph.D. student in the Department of Mechanical and Aerospace Engineering at The George Washington University, specializing in fluid mechanics and soft matter systems. Her research investigates the deformation, breakup, and particle tracking of extracellular polymeric substances (EPS), xanthan gum, and marine snow aggregates under laminar and turbulent flows. By combining experimental fluid dynamics, rheology, and advanced imaging, she explores how turbulence controls particle aggregation and carbon transport between the surface and mesopelagic ocean layers.\nPrior to her doctoral studies, she completed her M.S. in Mechanical Engineering at South Dakota State University, where she developed corn kernel–based biocomposite films for sustainable food packaging applications. This work advanced environmentally friendly alternatives to petroleum-based plastics through the integration of natural fibers and biopolymers.\nBeyond research, Swastika has presented her work at the American Physical Society and the AGU Ocean Sciences meeting. She is passionate about bridging fundamental fluid mechanics with environmentally friendly polymer applications that address global sustainability challenges. Outside of academics, she enjoys cooking, exploring new places, and reading comics.\n\n\n\nOffice hours and Location: TBA\nEmail: swastika.bera at gwu dot edu\nLinkedIn",
+    "crumbs": [
+      "Instruction Team"
+    ]
+  },
+  {
+    "objectID": "instructor.html#salman-niazi-undergraduate-teaching-assistant",
+    "href": "instructor.html#salman-niazi-undergraduate-teaching-assistant",
+    "title": "Instruction Team",
+    "section": "Salman Niazi (Undergraduate Teaching Assistant)",
+    "text": "Salman Niazi (Undergraduate Teaching Assistant)\n\n\n\nSalman Niazi is a senior studying Mechanical and Aerospace Engineering at The George Washington University. He currently works as an undergraduate research assistant in the Micropropulsion and Nanotechnology Laboratory, where his focus is on air-breathing plasma thrusters and advanced propulsion systems. Salman has also gained industry experience through internships in the energy industry, where he worked on HVAC design and energy systems. Salman has previously been an Undergraduate Learning Assistant for the past two years and has loved every moment of it. He enjoys supporting students in and out of the classroom, fostering collaboration, and helping them gain confidence in tackling challenging concepts. Outside of class, Salman loves biking, exploring new cafes, and discussing emerging technologies.\n\n\n \nOffice hours and Location: TBA\nEmail: salmank437 at gwmail dot gwu dot edu\n[LinkedIn] TBA",
+    "crumbs": [
+      "Instruction Team"
+    ]
+  },
+  {
+    "objectID": "instructor.html#lucy-truemper-learning-assistant",
+    "href": "instructor.html#lucy-truemper-learning-assistant",
+    "title": "Instruction Team",
+    "section": "Lucy Truemper (Learning Assistant)",
+    "text": "Lucy Truemper (Learning Assistant)\n\n\n\nLucy Truemper is in her fourth and last year at The George Washington University studying for her undergraduate degree in civil engineering with a concentration in environmental engineering. Lucy is currently assisting in research for the mechanical and aerospace engineering department at GWU doing materials testing for model sea lion flippers to better understand how flexibility parameters affect the flow fields of sea lion flippers. Outside of classes, Lucy is a Co-Captain for the GWU student steel bridge team where she applies her understanding of structural engineering and leads a fabrication team. She is originally from Washington state where natural water sources are abundant which has maintained her interest in fields related to fluid mechanics, water treatment, and hydraulics.\n\n\n \nOffice hours and Location: TBA\nEmail: lucytruemper at gwmail dot gwu dot edu\n[LinkedIn]TBA",
+    "crumbs": [
+      "Instruction Team"
+    ]
+  },
+  {
+    "objectID": "realvnc-windows.html",
+    "href": "realvnc-windows.html",
+    "title": "RealVNC Installation Guide for Windows",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this workshop:\nBulusu, Kartik V. (2024, October 12). Connect, Compute and Communicate! Practical introduction to a DIY internet of things system. [Workshop for the IEEE Northern Virigina Section and IEEE Computer Society]. Department of Mechanical and Aerospace Engineering, The George Washington University.\nThis guide will walk you through the process of installing and setting up RealVNC on your Windows computer to enable remote desktop access."
+  },
+  {
+    "objectID": "realvnc-windows.html#prerequisites",
+    "href": "realvnc-windows.html#prerequisites",
+    "title": "RealVNC Installation Guide for Windows",
+    "section": "Prerequisites",
+    "text": "Prerequisites\nBefore you begin, ensure you meet the following requirements:\n\nA Windows computer running a supported version of Windows (e.g., Windows 10, Windows 8, Windows 7).\nInternet access."
+  },
+  {
+    "objectID": "realvnc-windows.html#installation-steps",
+    "href": "realvnc-windows.html#installation-steps",
+    "title": "RealVNC Installation Guide for Windows",
+    "section": "Installation Steps",
+    "text": "Installation Steps\n\n0. Download the installation file here\n\n\n1. Install VNC Viewer\nLocate the downloaded installer file (e.g., VNC-Viewer-*.exe) and double-click it to run the installer. Once the installation is complete, click “Finish” to exit the installer.\n\n\n\nOpen Installer\n\n\n\n\n\nRun Installer\n\n\n\n\n3. Follow Installation Wizard\nThe installation wizard will guide you through the installation process. Click on “Customize installation” and “Deselect RealVNC Server” and hit “Install”.\n\n\n\nSelect English as the peferred language\n\n\n\n\n\nClick on Next\n\n\n\n\n\nAccept terms and conditions, and click Next.\n\n\n\n\n\nSelect installation location\n\n\n\n\n\nClick on Install\n\n\n\n\n\nFinish installation\n\n\n\n\n\n\n4. Launch RealVNC Viewer\nOnce the installation is complete, you can launch RealVNC Viewer from Start.\n\n\n\nOpen RealVNC\n\n\n\n\n\nWhen prompted click on “Sign in to get Started and hit cancel button\n\n\nIf prompted to Log in/Sign Up hit “Cancel”, you’re NOT REQUIRED to sign up.\n\n\n\nHit Cancel button"
+  },
+  {
+    "objectID": "agenda.html",
+    "href": "agenda.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Important\n\n\n\nReferencing the content in this course:\nBulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mechanical and Aerospace Engineering, The George Washington University.\n\n\n\n\n\n\n\n\nImportant\n\n\n\n\nThe attached course outline is subject to change depending on the pace of the class.\nPay attention to the location of each meeting. Sometimes you will be in the GW assigned classroom, and sometimes you will be in the Fluids Lab (SEH B1280 and SEH 1200).\nThe course is desinged with active learning modules with limited number of hardware components. \n\n\n\n\n\n\n\n\n\n\n\n\n\nWeek\nDate\nLaboratory or Recitation Topic\nRoom\nDeliverables (Due date)\n\n\n\n\n0: 08/25 to 08/31\n08/27\n[Lab-0]: Buoyancy force on Tin Foil Boat\n\nInstallation of Python IDE (Anaconda or Thonny)\n\nSEH B1200\nUpload Lab-0 deliverable by 08/29\n\n\nTin Foil Boat Data Plot\n\n\n\n\n09/01\nLabor Day (no classes)\n\n\n\n\n1: 09/01 to 09/07\n09/03\nRecitation-0: Tin Foil Boat Data Analysis + Manometers\n\nP-Set00: Correlation calculation in Tin Foil Boat data using Python\nP-Set01: Practice Problems on Manometers\n\nSEH B1280\n\nSubmit P-Set00 solutions by 09/06\nSubmit P-Set01 solutions by 09/06\nDownload files for P-Set00 submission\n\n\nBoat Data\n\nPython library requirements file\n\n\n\n\n2: 09/08 to 09/14\n09/10\nRecitation-1: Hydrostatic forces and Gates\n\nP-Set1: Practice Problems on Hydrostatic forces and Gates\n\nSEH B1280\nNone\n\n\n3: 09/15 to 09/21\n09/17\n[Lab-1]: Venturi Tube\n\n\nSEH B1200\n\nSubmit P-Set1 solutions by 09/16\nDownload files for Lab-1 Submission\n\n\nSample Data\n\nSample Python\n\nPlot generated from Sample Data\n\nTemplate Excel file\n\n\n\n\n4: 09/22 to 09/28\n09/24\nRecitation-2: Review\n\nP-Set2: Practice Problems\n\nSEH B1280\nNone\n\n\n5: 09/29 to 10/05\n10/1\nLab-2: Hydraulic Jump Experiment\n\n\nSEH B1200\n\nSubmit P-Set2 solutions by 09/30\n\n\nSubmit Lab-1 report on Venturi Tube by 10/01\n\n\n\n6: 10/06 to 10/12\n10/08\nLab-3: Impact of a Jet\n\n\nSEH B1200\nNone\n\n\n7: 10/13 to 10/19\n10/15\nRecitation 3: Python Programming with more on how-to analyze experimental data\n\n\nSEH B1280\nSubmit Lab-2 report on Hydraulic Jump by 10/15\n\n\n8: 10/20 to 10/26\n10/22\nEngineering Ethics\n\nCase studies\nIntroduction to the Group Poster Project\nGroup Formation\n\nSEH B1280\nSubmit Lab-3 report on Impact of a Jet by 10/22\n\n\n9: 10/27 to 11/02\n10/29\nRecitation-4: Exact solutions to the Navier-Stokes Equations\n\nP-Set4: Practice problems on Navier-Stokes Equations\n\nSEH B1280\nNone\n\n\n10: 11/03 to 11/09\n11/05\nLab-4: Fluid Friction\n\n\nSEH B1280\n\nSubmit P-Set4 solutions by 11/07\nSubmit Lab-4 report on Impact of Jet by 11/08\n\n\n\n11: 11/10 to 11/16\n11/12\nRecitation-5: Final Review\n\nP-set5: Practice Problems\n\nSEH B1280\nNone\n\n\n12: 11/17 to 11/23\n11/19\nLaboratory Make Up Session\nSEH B1200\n\nSubmit Ethics Poster draft by 11/23\nSubmit P-Set5 solutions by 12/01\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n13: 11/24 to 11/30\n11/27\nThanksgiving Break (no classes)\nMake sure you\n\nSubmit P-Set5 solutions by 12/01, and\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n14: 12/01 to 12/07\n12/03\n\nEngineering Ethics Poster Presentations\nSEH B1280\nFinal Reminder that you need to\n\nSubmit P-Set5 solutions by 12/01, and\nSubmit Lab-4 report on Fluid Friction by 12/01\n\n\n\n\n12/08\nLast Day of Classes\n\n\n\n12/09\nDesignated Thursday\n\n\n\n12/10\nDesignated Friday\n\n\n\n12/11\nMake-up/Reading Day\n\n\n12/12 to 12/18\n\nFinal Exams",
+    "crumbs": [
+      "Schedule"
+    ]
   },
   {
     "objectID": "install-editor.html",
