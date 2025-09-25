@@ -38,11 +38,11 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
 ```{=html}
 <table style="width:100%">
     <colgroup>
-        <col style="width:5%">
-        <col style="width:5%">
-        <col style="width:45%">
         <col style="width:10%">
-        <col style="width:35%">
+        <col style="width:10%">
+        <col style="width:40%">
+        <col style="width:15%">
+        <col style="width:25%">
     </colgroup>
     <thead>
         <tr class="table-primary">
@@ -55,15 +55,17 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         </tr>
     </thead>
     <tbody>
-        <tr>
+        <tr class="table-active">
             <td>0: 08/25 to 08/31</td>
             <td>08/27</td>           
             <td><a href="/documents/tin_foil_boat_Fall2025.pdf" target="_blank"><strong>[Lab-0]</strong></a>: Buoyancy force on Tin Foil Boat<ul>  
                     <li>Installation of Python IDE (Anaconda or Thonny) </li>
             </td>
             <td>SEH B1200</td>            
-            <td>Upload <strong>Lab-0</strong> deliverable by 08/29 <ul>
+            <td>Upload <strong>Lab-0</strong> deliverable by 08/29 
+            <ul>
                 <li><a href="/documents/TinFoil_DataPlot.html" target="_blank"><strong>Tin Foil Boat Data Plot</strong></li>  
+            </ul>    
             </td>                      
         </tr>
         <tr class="table-info">
@@ -76,11 +78,14 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>1: 09/01 to 09/07</td>
             <td>09/03</td> 
-            <td><strong  style="text-align: center">Recitation-0:</strong> Tin Foil Boat Data Analysis + Manometers<ul>
+            <td><strong  style="text-align: center">Recitation-0:</strong> Tin Foil Boat Data Analysis + Manometers
+            <ul>
                     <li><strong>P-Set00:</strong> Correlation calculation in Tin Foil Boat data using Python</li>                    
                     <li><strong>P-Set01:</strong> Practice Problems on Manometers</li>
                     <!-- <li><a href="/documents/Recitation0/Pset00/R0_Pset00.pdf" target="_blank"><strong>[P-Set00]</strong></a> Analysis of Tin Foil Boat data using Python</li>
-                    <li><a href="/documents/Recitation0/Pset01/R0_Pset01.csv" target="_blank"><strong>[P-Set01]</strong></a> Practice Problems on Manometers</li>                                     -->
+                    <li><a href="/documents/Recitation0/Pset01/R0_Pset01.csv" target="_blank"><strong>[P-Set01]</strong></a> Practice Problems on Manometers</li>       
+                                                  -->
+            </ul>                                                  
             </td>           
             <td>SEH B1280</td>            
             <td><ul>
@@ -96,8 +101,10 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>                    
             <td>2: 09/08 to 09/14</td>
             <td>09/10</td>    
-            <td><strong  style="text-align: center">Recitation-1:</strong> Hydrostatic forces and Gates<ul> 
+            <td><strong  style="text-align: center">Recitation-1:</strong> Hydrostatic forces and Gates
+            <ul> 
                     <li><strong>P-Set1:</strong> Practice Problems on Hydrostatic forces and Gates</li>
+            </ul>
             </td>                    
             <td>SEH B1280</td>            
             <td>None</td>      
@@ -109,11 +116,13 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             </td>                      
             <td>SEH B1280</td>            
             <td>Submit <strong>P-Set2</strong> data and a working Python program by 9/19</td>      -->
-            <td><a href="/documents/Lab_VenturiTube/venturi_tube_Fall2025.pdf" target="_blank"><strong>[Lab-1]</strong></a>: Venturi Tube<ul>
+            <td><a href="/documents/Lab_VenturiTube/venturi_tube_Fall2025.pdf" target="_blank"><strong>[Lab-1]</strong></a>: Venturi Tube
+            <ul>
                 <li><a href="/documents/venturi_dashboard.html" target="_blank"><strong>Venturi Sample Data Plot</strong></li> 
+            </ul>
             </td> 
             <td>SEH B1200</td>            
-            <td><ul>
+            <td>
                 <li>Submit <strong>P-Set1</strong> solutions by 09/16</li>
                 <li><strong>Download files for Lab-1 Submission</strong></li>
                 <ul>
@@ -123,13 +132,16 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                     <li><a href="/documents/Lab_VenturiTube/Venturi_Tube.xlsx" target="_blank"><strong>Template Excel file</strong></li>
                   
                     <!-- <li><a href="/documents/Recitation0/Pset00/TinFoil_Corrrelation.py" target="_blank"><strong>Python program</strong></li> -->
+                </ul>                   
             </td> 
         </tr>
         <tr>
             <td>4: 09/22 to 09/28</td>
             <td>09/24</td>            
-            <td><strong  style="text-align: center">Recitation-2:</strong> Review<ul> 
-                    <li><strong>P-Set2:</strong> Practice Problems</li>
+            <td><strong  style="text-align: center">Recitation-2:</strong> Hydrostatic forces, Bernoulli equation and Conservation of Mass
+            <ul> 
+                <li><strong>P-Set2:</strong> Practice Problems on Hydrostatic forces, Bernoulli equation and Conservation of Mass</li>
+            </ul>                    
             </td>   
             <td>SEH B1280</td>                                          
             <td>None</td>       
@@ -137,9 +149,11 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr class="table-active">
             <td>5: 09/29 to 10/05</td>
             <td>10/1</td> 
-            <td><strong>Lab-2:</strong> Hydraulic Jump Experiment<ul>
-                <!-- <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li> -->
-            </td>
+            <td><strong  style="text-align: center">Recitation 3: </strong>Conservation of Mass and Python Programming
+            <ul>
+                <li><strong>P-Set3:</strong> Practice Problems on Conservation of Mass and Python Programming</li>
+            </ul>
+            </td>                 
             <td>SEH B1200</td>            
             <td>
                 <li>Submit <strong>P-Set2</strong> solutions by 09/30</li>                
@@ -153,31 +167,28 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                 <!-- <li><strong>Lab-3:</strong> Impact of a Jet</li> -->
             </td>                      
             <td>SEH B1200</td>            
-            <td>None</td>                     
+            <td><li>Submit <strong>P-Set3</strong> solutions by 10/08</li> </td>                        
         </tr>
         <tr class="table-active">
             <td>7: 10/13 to 10/19</td>
             <td>10/15</td>             
-            <td><strong  style="text-align: center">Recitation 3: </strong> Python Programming with more on how-to analyze experimental data<ul> 
+            <td><strong  style="text-align: center">Engineering Ethics</strong>
+            <ul>
+                <li>Case studies</li>
+                <li>Introduction to the Group Poster Project</li> 
+                <li>Group Formation</li>
+            </ul>
             </td>                      
             <td>SEH B1280</td>            
-            <!-- <td>Submit <strong>P-Set3</strong> data and a working Python program by 9/19</td>          
-                        <td>10/15</td>  
-            <td><ul>
-                <li><strong>Lab-3:</strong> Impact of a Jet</li>
-            </td>                      
-            <td>SEH B1200</td>             -->
-            <td>Submit <strong>Lab-2</strong> report on Hydraulic Jump by 10/15</td>      
+            <td>None</td>      
         </tr>
         <tr>
             <td>8: 10/20 to 10/26</td>
-            <td>10/22</td>            
-            <td><strong  style="text-align: center">Engineering Ethics</strong><ul>
-                    <li>Case studies</li>
-                    <li>Introduction to the Group Poster Project</li> 
-                    <li>Group Formation</li>
-            </td>  
-            <td>SEH B1280</td>            
+            <td>10/22</td>    
+            <td><strong>Lab-2:</strong> Hydraulic Jump Experiment<ul>
+                <!-- <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li> -->
+            </td>         
+            <td>SEH B1200</td>            
             <td>Submit <strong>Lab-3</strong> report on Impact of a Jet by 10/22</td>    
         </tr>
         <tr class="table-active">
@@ -187,7 +198,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                 <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
             </td>                                
             <td>SEH B1280</td>            
-            <td>None</td>  
+            <td>Submit <strong>Lab-2</strong> report on Hydraulic Jump by 10/29</td>  
         </tr>
         <tr>
             <td>10: 11/03 to 11/09</td>
@@ -197,15 +208,14 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             </td>                               
             <td>SEH B1280</td>            
             <td><ul> 
-                    <li>Submit <strong>P-Set4</strong> solutions by 11/07</li> 
-                    <li>Submit <strong>Lab-4</strong> report on Impact of Jet by 11/08</li>
+                    <li>Submit <strong>P-Set4</strong> solutions by 11/05</li> 
             </td>
         </tr>        
         <tr class="table-active">
             <td>11: 11/10 to 11/16</td>
             <td>11/12</td>  
                        <td><strong  style="text-align: center">Recitation-5:</strong> Final Review<ul> 
-                <li><strong>P-set5:</strong> Practice Problems</li>
+                <li><strong>P-Set5:</strong> Practice Problems</li>
             </td>
             <td>SEH B1280</td>               
             <td>None</td>
@@ -213,7 +223,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>12: 11/17 to 11/23</td>
             <td>11/19</td>     
-            <td style="text-align: center"><strong>Laboratory Make Up Session</strong></td>        
+            <td><strong>Laboratory Make Up Session</strong></td>        
             <!-- <td><ul>                     
                     <li><strong>Lab-4:</strong> Fluid Friction</li>
             </td> -->
