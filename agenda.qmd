@@ -154,7 +154,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>10/1</td> 
             <td><strong  style="text-align: center">Recitation 3: </strong>Conservation of Mass and Python Programming
             <ul>
-                <li><strong>P-Set3:</strong> Practice Problems on Conservation of Mass and Python Programming</li>
+                <li><strong>P-Set3:</strong> Practice Problems on Conservation of Mass and Momentum, and Python Programming</li>
                 <li><a href="/documents/Recitation3/Strategy_Reciation3_10012025.pdf" target="_blank"><strong>Discussion</strong></li>                
             </ul>
             </td>                 
