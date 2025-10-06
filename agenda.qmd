@@ -163,11 +163,23 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>6: 10/06 to 10/12</td>
             <td>10/08</td>   
-            <td><strong>Lab-3:</strong> Impact of a Jet<ul>
+            <td><strong>Lab-2:</strong> Impact of a Jet<ul>
                 <!-- <li><strong>Lab-3:</strong> Impact of a Jet</li> -->
             </td>                      
             <td>SEH B1200</td>            
-            <td><li>Submit <strong>P-Set3</strong> solutions by 10/08</li> </td>                        
+            <td>
+            <li>Submit <strong>P-Set3</strong> solutions by 10/08</li>  
+            <li><strong>Download files for Lab-2 Submission</strong></li>
+            <ul>
+                <li><a href="/documents/Lab_ImpactJet/SampleData_ImpactOfJet.xlsx" target="_blank"><strong>Sample Data</strong></li>
+                <li><a href="/documents/Lab_ImpactJet/ImpactOfJet_SampleData.ipynb" target="_blank"><strong>Sample Python</strong></li>
+                <li><a href="/documents/Lab_ImpactJet/Bulusu_Bengisu_Swastika_Consultants1.png" target="_blank"><strong>Plot1 generated from Sample Data</strong></li>            
+                <li><a href="/documents/Lab_ImpactJet/Bulusu_Bengisu_Swastika_Consultants2.png" target="_blank"><strong>Plot2 generated from Sample Data</strong></li>                            
+                <li><a href="/documents/Lab_ImpactJet/Impact_Jet.xlsx" target="_blank"><strong>Template Excel file</strong></li>
+                  
+                    <!-- <li><a href="/documents/Recitation0/Pset00/TinFoil_Corrrelation.py" target="_blank"><strong>Python program</strong></li> -->
+            </ul>
+            </td>                                    
         </tr>
         <tr class="table-active">
             <td>7: 10/13 to 10/19</td>
@@ -185,11 +197,11 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>8: 10/20 to 10/26</td>
             <td>10/22</td>    
-            <td><strong>Lab-2:</strong> Hydraulic Jump Experiment<ul>
+            <td><strong>Lab-3:</strong> Hydraulic Jump Experiment<ul>
                 <!-- <li><strong>Lab-2:</strong> Hydraulic Jump Experiment</li> -->
             </td>         
             <td>SEH B1200</td>            
-            <td>Submit <strong>Lab-3</strong> report on Impact of a Jet by 10/22</td>    
+            <td>Submit <strong>Lab-2</strong> report on Impact of a Jet by 10/22</td>    
         </tr>
         <tr class="table-active">
             <td>9: 10/27 to 11/02</td>

@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.40">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Kartik Bulusu">
+<meta name="dcterms.date" content="2025-10-06">
+
+<title>MAE 3127 - Fall 2025 – Fluid Mechanics Laboratory (Fall 2025)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
+      Fluid Mechanics Laboratory (Fall 2025)
+      </li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Fluid Mechanics Laboratory (Fall 2025)</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Home</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../objectives.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Learning Objectives</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../policies.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Grading and Course Policies</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../agenda.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Schedule</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../instructor.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Instruction Team</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#laboratory-impact-of-a-jet-experiment" id="toc-laboratory-impact-of-a-jet-experiment" class="nav-link active" data-scroll-target="#laboratory-impact-of-a-jet-experiment">Laboratory: Impact of a jet Experiment</a>
+  <ul class="collapse">
+  <li><a href="#instructor-and-code-author-prof.-kartik-bulusu-mae" id="toc-instructor-and-code-author-prof.-kartik-bulusu-mae" class="nav-link" data-scroll-target="#instructor-and-code-author-prof.-kartik-bulusu-mae">Instructor and code author: Prof.&nbsp;Kartik Bulusu [MAE]</a></li>
+  <li><a href="#lets-start-by-importing-our-favorite-friends-as-always-going-forward-in-this-class-numpy-matplotlib-and-pandas" id="toc-lets-start-by-importing-our-favorite-friends-as-always-going-forward-in-this-class-numpy-matplotlib-and-pandas" class="nav-link" data-scroll-target="#lets-start-by-importing-our-favorite-friends-as-always-going-forward-in-this-class-numpy-matplotlib-and-pandas">Let’s start by importing our favorite friends as always going forward in this class: <strong>numpy</strong>, <strong>matplotlib</strong>, and <strong>pandas</strong></a></li>
+  <li><a href="#start-playing-with-pandas-library-to-get-all-the-data-from-the-excel-spreadsheet-into-python." id="toc-start-playing-with-pandas-library-to-get-all-the-data-from-the-excel-spreadsheet-into-python." class="nav-link" data-scroll-target="#start-playing-with-pandas-library-to-get-all-the-data-from-the-excel-spreadsheet-into-python.">Start playing with <code>pandas</code> library to get all the data from the excel spreadsheet into python.</a>
+  <ul class="collapse">
+  <li><a href="#jargon-dataframe" id="toc-jargon-dataframe" class="nav-link" data-scroll-target="#jargon-dataframe">Jargon: <code>dataframe</code></a></li>
+  <li><a href="#pandas-is-a-library-to-work-with-dataframe-objects.-dataframes-are-a-way-to-represent-data-in-rows-and-columns-much-like-a-matrix" id="toc-pandas-is-a-library-to-work-with-dataframe-objects.-dataframes-are-a-way-to-represent-data-in-rows-and-columns-much-like-a-matrix" class="nav-link" data-scroll-target="#pandas-is-a-library-to-work-with-dataframe-objects.-dataframes-are-a-way-to-represent-data-in-rows-and-columns-much-like-a-matrix">Pandas is a library to work with dataframe objects. Dataframes are a way to represent data in rows and columns, much like a matrix!!</a></li>
+  <li><a href="#a-little-vocab-to-get-us-started.-i-promise-it-wont-be-much" id="toc-a-little-vocab-to-get-us-started.-i-promise-it-wont-be-much" class="nav-link" data-scroll-target="#a-little-vocab-to-get-us-started.-i-promise-it-wont-be-much">A little vocab to get us started. I promise it won’t be much!</a></li>
+  </ul></li>
+  <li><a href="#showing-dataframes" id="toc-showing-dataframes" class="nav-link" data-scroll-target="#showing-dataframes">Showing Dataframes</a></li>
+  <li><a href="#data-related-to-beta-90-degrees" id="toc-data-related-to-beta-90-degrees" class="nav-link" data-scroll-target="#data-related-to-beta-90-degrees">Data related to ‘Beta = 90 degrees’</a>
+  <ul class="collapse">
+  <li><a href="#getting-the-head-and-tail-of-dataframe-df1-literally" id="toc-getting-the-head-and-tail-of-dataframe-df1-literally" class="nav-link" data-scroll-target="#getting-the-head-and-tail-of-dataframe-df1-literally">Getting the head and tail of dataframe (<code>df1</code>), literally!</a></li>
+  </ul></li>
+  <li><a href="#data-related-to-beta-120-degrees" id="toc-data-related-to-beta-120-degrees" class="nav-link" data-scroll-target="#data-related-to-beta-120-degrees">Data related to ‘Beta = 120 degrees’</a></li>
+  <li><a href="#data-related-to-beta-180-degrees" id="toc-data-related-to-beta-180-degrees" class="nav-link" data-scroll-target="#data-related-to-beta-180-degrees">Data related to ‘Beta = 180 degrees’</a>
+  <ul class="collapse">
+  <li><a href="#note-there-is-not-data-in-the-table-beta-180-degrees-in-file-sampledata_impactofjet.xlsx." id="toc-note-there-is-not-data-in-the-table-beta-180-degrees-in-file-sampledata_impactofjet.xlsx." class="nav-link" data-scroll-target="#note-there-is-not-data-in-the-table-beta-180-degrees-in-file-sampledata_impactofjet.xlsx.">Note: There is not data in the table, ‘Beta = 180 degrees’ in file, <code>SampleData_ImpactOfJet.xlsx</code>.</a></li>
+  </ul></li>
+  <li><a href="#dataframe-shape" id="toc-dataframe-shape" class="nav-link" data-scroll-target="#dataframe-shape">Dataframe Shape</a></li>
+  <li><a href="#accessing-data-within-frames" id="toc-accessing-data-within-frames" class="nav-link" data-scroll-target="#accessing-data-within-frames">Accessing Data within Frames</a></li>
+  <li><a href="#lets-start-with-accessing-data-in-the-dataframe-df1." id="toc-lets-start-with-accessing-data-in-the-dataframe-df1." class="nav-link" data-scroll-target="#lets-start-with-accessing-data-in-the-dataframe-df1.">Let’s start with accessing data in the dataframe, <code>df1</code>.</a></li>
+  <li><a href="#matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df1" id="toc-matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df1" class="nav-link" data-scroll-target="#matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df1">Matplotlib Pyplot Figures and Subplots for the dataframe, <code>df1</code></a></li>
+  <li><a href="#also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit." id="toc-also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit." class="nav-link" data-scroll-target="#also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.">Also .. First-degree polynomial fit, fancy way of saying linear-fit.</a></li>
+  <li><a href="#save-the-above-plot-as-a-png-file-for-the-dataframe-df1" id="toc-save-the-above-plot-as-a-png-file-for-the-dataframe-df1" class="nav-link" data-scroll-target="#save-the-above-plot-as-a-png-file-for-the-dataframe-df1">Save the above plot as a png-file, for the dataframe, <code>df1</code></a></li>
+  <li><a href="#lets-now-try-accessing-data-in-the-dataframe-df2." id="toc-lets-now-try-accessing-data-in-the-dataframe-df2." class="nav-link" data-scroll-target="#lets-now-try-accessing-data-in-the-dataframe-df2.">Let’s now try accessing data in the dataframe, <code>df2</code>.</a></li>
+  <li><a href="#matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df2" id="toc-matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df2" class="nav-link" data-scroll-target="#matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df2">Matplotlib Pyplot Figures and Subplots for the dataframe, <code>df2</code></a></li>
+  <li><a href="#also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.-1" id="toc-also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.-1" class="nav-link" data-scroll-target="#also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.-1">Also .. First-degree polynomial fit, fancy way of saying linear-fit.</a></li>
+  <li><a href="#save-the-above-plot-as-a-png-file" id="toc-save-the-above-plot-as-a-png-file" class="nav-link" data-scroll-target="#save-the-above-plot-as-a-png-file">Save the above plot as a png-file</a></li>
+  <li><a href="#now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data" id="toc-now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data" class="nav-link" data-scroll-target="#now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data">Now that you learned how to run a python code that plots your experimental data</a>
+  <ul class="collapse">
+  <li><a href="#you-should-have-three-tables-of-data-gathered." id="toc-you-should-have-three-tables-of-data-gathered." class="nav-link" data-scroll-target="#you-should-have-three-tables-of-data-gathered.">You should have three tables of data gathered.</a></li>
+  <li><a href="#you-can-start-by-adding-data-in-the-dataframe-df3-by-modified-the-file-sampledata_impactofjet.xlsx." id="toc-you-can-start-by-adding-data-in-the-dataframe-df3-by-modified-the-file-sampledata_impactofjet.xlsx." class="nav-link" data-scroll-target="#you-can-start-by-adding-data-in-the-dataframe-df3-by-modified-the-file-sampledata_impactofjet.xlsx.">You can start by adding data in the dataframe <code>df3</code> by modified the file, <code>SampleData_ImpactOfJet.xlsx</code>.</a></li>
+  <li><a href="#you-should" id="toc-you-should" class="nav-link" data-scroll-target="#you-should">You should</a></li>
+  <li><a href="#ultimately-you-need-to-submit-the-following-deliverables-on-blackboard" id="toc-ultimately-you-need-to-submit-the-following-deliverables-on-blackboard" class="nav-link" data-scroll-target="#ultimately-you-need-to-submit-the-following-deliverables-on-blackboard">Ultimately, you need to submit the following deliverables on Blackboard</a></li>
+  <li><a href="#only-a-working-code-that-is-written-by-you-will-be-graded." id="toc-only-a-working-code-that-is-written-by-you-will-be-graded." class="nav-link" data-scroll-target="#only-a-working-code-that-is-written-by-you-will-be-graded.">Only a working code that is written by you will be graded.</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">MAE 3127 - Fall 2025</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Kartik Bulusu </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 6, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="laboratory-impact-of-a-jet-experiment" class="level1">
+<h1>Laboratory: Impact of a jet Experiment</h1>
+<section id="instructor-and-code-author-prof.-kartik-bulusu-mae" class="level3">
+<h3 class="anchored" data-anchor-id="instructor-and-code-author-prof.-kartik-bulusu-mae">Instructor and code author: Prof.&nbsp;Kartik Bulusu [MAE]</h3>
+<section id="graduate-teaching-assistants-bengisu-sisik-swastika-bera-mae" class="level4">
+<h4 class="anchored" data-anchor-id="graduate-teaching-assistants-bengisu-sisik-swastika-bera-mae">Graduate Teaching Assistants: Bengisu Sisik, Swastika Bera [MAE]</h4>
+</section>
+<section id="undergraduate-teaching-assistant-salman-niazi-mae" class="level4">
+<h4 class="anchored" data-anchor-id="undergraduate-teaching-assistant-salman-niazi-mae">Undergraduate Teaching Assistant: Salman NIazi [MAE]</h4>
+</section>
+<section id="learning-assistant-lucy-truemper-cee" class="level4">
+<h4 class="anchored" data-anchor-id="learning-assistant-lucy-truemper-cee">Learning Assistant: Lucy Truemper [CEE]</h4>
+<p><strong>Must-do:</strong> - <strong>A sample data set (<code>SampleData_ImpactOfJet.xlsx</code>) is provided to you.</strong> - You are stongly encouraged to use this Jupyter notebook to practice with the sample data set. - Read through all comments; sometimes they are cryptic and sometimes funny! They are useful nonetheless. - When are sure about how to run the program you can then try it on <strong>your</strong> experimental data.</p>
+<p><strong>Caveat:</strong><br>
+- <strong>Do not change the headers, column names or table names in the file, <code>SampleData_ImpactOfJet.xlsx</code>.</strong> - You can remove the sample data to include your data generated from the experiment when you are ready.</p>
+</section>
+</section>
+<section id="lets-start-by-importing-our-favorite-friends-as-always-going-forward-in-this-class-numpy-matplotlib-and-pandas" class="level2">
+<h2 class="anchored" data-anchor-id="lets-start-by-importing-our-favorite-friends-as-always-going-forward-in-this-class-numpy-matplotlib-and-pandas">Let’s start by importing our favorite friends as always going forward in this class: <strong>numpy</strong>, <strong>matplotlib</strong>, and <strong>pandas</strong></h2>
+<div id="cell-3" class="cell" data-cell_id="00002-97b564d8-4071-4363-9f9b-9729f2e107d8" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="585" data-execution_start="1633631428489" data-source_hash="e4a0c7a1" data-tags="[]" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> polyfit</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Before we get started with pandas, we are going to introduce a function called <code>help()</code> which will provide some information about functions we are working with!</p>
+<div id="cell-5" class="cell" data-cell_id="00004-4709f4e3-03bf-4e7e-9361-692d38dad22a" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="18" data-execution_start="1633631928533" data-source_hash="666c1295" data-tags="[]" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Here we ask python to tell us about the np.array function, but this works with everything!</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(np.array)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Help on built-in function array in module numpy:
+
+array(...)
+    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
+          like=None)
+    
+    Create an array.
+    
+    Parameters
+    ----------
+    object : array_like
+        An array, any object exposing the array interface, an object whose
+        __array__ method returns an array, or any (nested) sequence.
+    dtype : data-type, optional
+        The desired data-type for the array.  If not given, then the type will
+        be determined as the minimum type required to hold the objects in the
+        sequence.
+    copy : bool, optional
+        If true (default), then the object is copied.  Otherwise, a copy will
+        only be made if __array__ returns a copy, if obj is a nested sequence,
+        or if a copy is needed to satisfy any of the other requirements
+        (`dtype`, `order`, etc.).
+    order : {'K', 'A', 'C', 'F'}, optional
+        Specify the memory layout of the array. If object is not an array, the
+        newly created array will be in C order (row major) unless 'F' is
+        specified, in which case it will be in Fortran order (column major).
+        If object is an array the following holds.
+    
+        ===== ========= ===================================================
+        order  no copy                     copy=True
+        ===== ========= ===================================================
+        'K'   unchanged F &amp; C order preserved, otherwise most similar order
+        'A'   unchanged F order if input is F and not C, otherwise C order
+        'C'   C order   C order
+        'F'   F order   F order
+        ===== ========= ===================================================
+    
+        When ``copy=False`` and a copy is made for other reasons, the result is
+        the same as if ``copy=True``, with some exceptions for 'A', see the
+        Notes section. The default order is 'K'.
+    subok : bool, optional
+        If True, then sub-classes will be passed-through, otherwise
+        the returned array will be forced to be a base-class array (default).
+    ndmin : int, optional
+        Specifies the minimum number of dimensions that the resulting
+        array should have.  Ones will be pre-pended to the shape as
+        needed to meet this requirement.
+    like : array_like
+        Reference object to allow the creation of arrays which are not
+        NumPy arrays. If an array-like passed in as ``like`` supports
+        the ``__array_function__`` protocol, the result will be defined
+        by it. In this case, it ensures the creation of an array object
+        compatible with that passed in via this argument.
+    
+        .. versionadded:: 1.20.0
+    
+    Returns
+    -------
+    out : ndarray
+        An array object satisfying the specified requirements.
+    
+    See Also
+    --------
+    empty_like : Return an empty array with shape and type of input.
+    ones_like : Return an array of ones with shape and type of input.
+    zeros_like : Return an array of zeros with shape and type of input.
+    full_like : Return a new array with shape of input filled with value.
+    empty : Return a new uninitialized array.
+    ones : Return a new array setting values to one.
+    zeros : Return a new array setting values to zero.
+    full : Return a new array of given shape filled with value.
+    
+    
+    Notes
+    -----
+    When order is 'A' and `object` is an array in neither 'C' nor 'F' order,
+    and a copy is forced by a change in dtype, then the order of the result is
+    not necessarily 'C' as expected. This is likely a bug.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; np.array([1, 2, 3])
+    array([1, 2, 3])
+    
+    Upcasting:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3.0])
+    array([ 1.,  2.,  3.])
+    
+    More than one dimension:
+    
+    &gt;&gt;&gt; np.array([[1, 2], [3, 4]])
+    array([[1, 2],
+           [3, 4]])
+    
+    Minimum dimensions 2:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3], ndmin=2)
+    array([[1, 2, 3]])
+    
+    Type provided:
+    
+    &gt;&gt;&gt; np.array([1, 2, 3], dtype=complex)
+    array([ 1.+0.j,  2.+0.j,  3.+0.j])
+    
+    Data-type consisting of more than one element:
+    
+    &gt;&gt;&gt; x = np.array([(1,2),(3,4)],dtype=[('a','&lt;i4'),('b','&lt;i4')])
+    &gt;&gt;&gt; x['a']
+    array([1, 3])
+    
+    Creating an array from sub-classes:
+    
+    &gt;&gt;&gt; np.array(np.mat('1 2; 3 4'))
+    array([[1, 2],
+           [3, 4]])
+    
+    &gt;&gt;&gt; np.array(np.mat('1 2; 3 4'), subok=True)
+    matrix([[1, 2],
+            [3, 4]])
+</code></pre>
+</div>
+</div>
+</section>
+<section id="start-playing-with-pandas-library-to-get-all-the-data-from-the-excel-spreadsheet-into-python." class="level2">
+<h2 class="anchored" data-anchor-id="start-playing-with-pandas-library-to-get-all-the-data-from-the-excel-spreadsheet-into-python.">Start playing with <code>pandas</code> library to get all the data from the excel spreadsheet into python.</h2>
+<section id="jargon-dataframe" class="level3">
+<h3 class="anchored" data-anchor-id="jargon-dataframe">Jargon: <code>dataframe</code></h3>
+</section>
+<section id="pandas-is-a-library-to-work-with-dataframe-objects.-dataframes-are-a-way-to-represent-data-in-rows-and-columns-much-like-a-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="pandas-is-a-library-to-work-with-dataframe-objects.-dataframes-are-a-way-to-represent-data-in-rows-and-columns-much-like-a-matrix">Pandas is a library to work with dataframe objects. Dataframes are a way to represent data in rows and columns, much like a matrix!!</h3>
+</section>
+<section id="a-little-vocab-to-get-us-started.-i-promise-it-wont-be-much" class="level3">
+<h3 class="anchored" data-anchor-id="a-little-vocab-to-get-us-started.-i-promise-it-wont-be-much">A little vocab to get us started. I promise it won’t be much!</h3>
+<ul>
+<li>The <strong>columns</strong> of a dataframe are called the <strong>columns</strong></li>
+<li>The <strong>rows</strong> of the dataframe are called the <strong>index</strong></li>
+</ul>
+<p>See that wasn’t too bad :)</p>
+<p>Last week we discussed importing data from a csv file into a pandas dataframe. We are going to bring that back and do a whole lot more with it this week! We have provided a <code>SampleData_ImpactOfJet.xlsx</code> file in this week’s content for this demonstration!</p>
+<section id="here-are-the-steps" class="level4">
+<h4 class="anchored" data-anchor-id="here-are-the-steps">Here are the steps!</h4>
+<ol type="1">
+<li><p>Locate place the file titled <code>SampleData_ImpactOfJet.xlsx</code> in the same folder as this jupyter notebook file</p></li>
+<li><p><code>Copy Path or Filenmake to Clipboard</code>; you may have to append <code>.xlsx</code> to the file name.</p></li>
+<li><p>Establish a <code>filename</code> variable in a code cell that is an empty string using <code>filename = ''</code> as show in the cell below</p></li>
+<li><p>Inside the quotes paste the path using <code>Ctrl+V</code> or <code>Cmd+V</code> on your keyboard</p></li>
+<li><p>You should now have something like this: <code>filename = 'SampleData_ImpactOfJet.xlsx'</code></p></li>
+<li><p>Finally, use <code>data = pd.ExcelFile(filename)</code> to save your file into a pandas dataframe!</p></li>
+</ol>
+<p>Before I started writing this code for your class I was playig with files from the datasets in <a href="https://vega.github.io/vega-datasets/">vega_datasets</a>, if you are curious.</p>
+<div id="cell-8" class="cell" data-cell_id="00005-c85d5593-8ccf-45d1-a299-a9cc53065446" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="33" data-execution_start="1633631430570" data-source_hash="2ab12214" data-tags="[]" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>filename <span class="op">=</span> <span class="st">'SampleData_ImpactOfJet.xlsx'</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.ExcelFile(filename)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> pd.read_excel(data, <span class="st">'Beta = 90 degrees'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> pd.read_excel(data, <span class="st">'Beta = 120 degrees'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> pd.read_excel(data, <span class="st">'Beta = 180 degrees'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="showing-dataframes" class="level2">
+<h2 class="anchored" data-anchor-id="showing-dataframes">Showing Dataframes</h2>
+<p>To show dataframes, we have a couple of options! First we can use what we did last week using the <code>display(df)</code> function which operates similarly to <code>print()</code>. We can also use <code>df.head()</code> and <code>df.tail()</code> which will just show parts of the frame. The <code>.head(n)</code> shows the first n lines of the frame, and the <code>.tail(m)</code> shows the last m lines of the frame</p>
+<p>Let’s try these out!</p>
+</section>
+<section id="data-related-to-beta-90-degrees" class="level2">
+<h2 class="anchored" data-anchor-id="data-related-to-beta-90-degrees">Data related to ‘Beta = 90 degrees’</h2>
+<div id="cell-11" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>display(df1) </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Before sorting in ascending order</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>df1 <span class="op">=</span> df1.sort_values(by<span class="op">=</span>[<span class="st">'Q (Ls^-1)'</span>])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># After sorting all columns with respect to the flowrate column (Q, Ls^-1) in ascending order</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df1)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Q (Ls^-1)</th>
+<th data-quarto-table-cell-role="th">Distance y (mm)</th>
+<th data-quarto-table-cell-role="th">m_dot (kg s^-1)</th>
+<th data-quarto-table-cell-role="th">u (ms^-1)</th>
+<th data-quarto-table-cell-role="th">u0 (ms^-1)</th>
+<th data-quarto-table-cell-role="th">m_dot x u0 (kg m s^-2)</th>
+<th data-quarto-table-cell-role="th">Experimental force, F (N)</th>
+<th data-quarto-table-cell-role="th">Theoretical force, F (N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.596</td>
+<td>109</td>
+<td>0.596</td>
+<td>7.588490</td>
+<td>7.543108</td>
+<td>4.495692</td>
+<td>4.27716</td>
+<td>4.495692</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0.578</td>
+<td>98</td>
+<td>0.578</td>
+<td>7.359307</td>
+<td>7.312503</td>
+<td>4.226627</td>
+<td>3.84552</td>
+<td>4.226627</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.563</td>
+<td>93</td>
+<td>0.563</td>
+<td>7.168322</td>
+<td>7.120263</td>
+<td>4.008708</td>
+<td>3.64932</td>
+<td>4.008708</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.546</td>
+<td>89</td>
+<td>0.546</td>
+<td>6.951872</td>
+<td>6.902305</td>
+<td>3.768659</td>
+<td>3.49236</td>
+<td>3.768659</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0.533</td>
+<td>85</td>
+<td>0.533</td>
+<td>6.786351</td>
+<td>6.735567</td>
+<td>3.590057</td>
+<td>3.33540</td>
+<td>3.590057</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>0.512</td>
+<td>80</td>
+<td>0.512</td>
+<td>6.518971</td>
+<td>6.466087</td>
+<td>3.310637</td>
+<td>3.13920</td>
+<td>3.310637</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Q (Ls^-1)  Distance y (mm)  m_dot (kg s^-1)  u (ms^-1)  u0 (ms^-1)  \
+5      0.512               80            0.512   6.518971    6.466087   
+4      0.533               85            0.533   6.786351    6.735567   
+3      0.546               89            0.546   6.951872    6.902305   
+2      0.563               93            0.563   7.168322    7.120263   
+1      0.578               98            0.578   7.359307    7.312503   
+0      0.596              109            0.596   7.588490    7.543108   
+
+   m_dot x u0 (kg m s^-2)  Experimental force, F (N)  Theoretical force, F (N)  
+5                3.310637                    3.13920                  3.310637  
+4                3.590057                    3.33540                  3.590057  
+3                3.768659                    3.49236                  3.768659  
+2                4.008708                    3.64932                  4.008708  
+1                4.226627                    3.84552                  4.226627  
+0                4.495692                    4.27716                  4.495692  </code></pre>
+</div>
+</div>
+<section id="getting-the-head-and-tail-of-dataframe-df1-literally" class="level3">
+<h3 class="anchored" data-anchor-id="getting-the-head-and-tail-of-dataframe-df1-literally">Getting the head and tail of dataframe (<code>df1</code>), literally!</h3>
+<div id="cell-13" class="cell" data-cell_id="00008-e5149bb0-a0a3-4596-8999-012654dc68cd" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="20" data-execution_start="1633631432478" data-source_hash="f30f989a" data-tags="[]" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>df1.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Q (Ls^-1)</th>
+<th data-quarto-table-cell-role="th">Distance y (mm)</th>
+<th data-quarto-table-cell-role="th">m_dot (kg s^-1)</th>
+<th data-quarto-table-cell-role="th">u (ms^-1)</th>
+<th data-quarto-table-cell-role="th">u0 (ms^-1)</th>
+<th data-quarto-table-cell-role="th">m_dot x u0 (kg m s^-2)</th>
+<th data-quarto-table-cell-role="th">Experimental force, F (N)</th>
+<th data-quarto-table-cell-role="th">Theoretical force, F (N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">5</td>
+<td>0.512</td>
+<td>80</td>
+<td>0.512</td>
+<td>6.518971</td>
+<td>6.466087</td>
+<td>3.310637</td>
+<td>3.13920</td>
+<td>3.310637</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0.533</td>
+<td>85</td>
+<td>0.533</td>
+<td>6.786351</td>
+<td>6.735567</td>
+<td>3.590057</td>
+<td>3.33540</td>
+<td>3.590057</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.546</td>
+<td>89</td>
+<td>0.546</td>
+<td>6.951872</td>
+<td>6.902305</td>
+<td>3.768659</td>
+<td>3.49236</td>
+<td>3.768659</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.563</td>
+<td>93</td>
+<td>0.563</td>
+<td>7.168322</td>
+<td>7.120263</td>
+<td>4.008708</td>
+<td>3.64932</td>
+<td>4.008708</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-14" class="cell" data-cell_id="00009-36341a9b-17f5-4924-b4a5-b662050c48bb" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="47" data-execution_start="1633631432862" data-source_hash="cdee9e9d" data-tags="[]" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>df1.tail(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Q (Ls^-1)</th>
+<th data-quarto-table-cell-role="th">Distance y (mm)</th>
+<th data-quarto-table-cell-role="th">m_dot (kg s^-1)</th>
+<th data-quarto-table-cell-role="th">u (ms^-1)</th>
+<th data-quarto-table-cell-role="th">u0 (ms^-1)</th>
+<th data-quarto-table-cell-role="th">m_dot x u0 (kg m s^-2)</th>
+<th data-quarto-table-cell-role="th">Experimental force, F (N)</th>
+<th data-quarto-table-cell-role="th">Theoretical force, F (N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.546</td>
+<td>89</td>
+<td>0.546</td>
+<td>6.951872</td>
+<td>6.902305</td>
+<td>3.768659</td>
+<td>3.49236</td>
+<td>3.768659</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.563</td>
+<td>93</td>
+<td>0.563</td>
+<td>7.168322</td>
+<td>7.120263</td>
+<td>4.008708</td>
+<td>3.64932</td>
+<td>4.008708</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0.578</td>
+<td>98</td>
+<td>0.578</td>
+<td>7.359307</td>
+<td>7.312503</td>
+<td>4.226627</td>
+<td>3.84552</td>
+<td>4.226627</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.596</td>
+<td>109</td>
+<td>0.596</td>
+<td>7.588490</td>
+<td>7.543108</td>
+<td>4.495692</td>
+<td>4.27716</td>
+<td>4.495692</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="cell-15" class="cell" data-cell_id="00011-69029b7f-8c56-41c0-9c69-ba7f37785047" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="54" data-execution_start="1633632020826" data-source_hash="3f920dcc" data-tags="[]" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Just to showcase it, let's use help(df.tail)</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(df1.tail)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Help on method tail in module pandas.core.generic:
+
+tail(n: 'int' = 5) -&gt; 'NDFrameT' method of pandas.core.frame.DataFrame instance
+    Return the last `n` rows.
+    
+    This function returns last `n` rows from the object based on
+    position. It is useful for quickly verifying data, for example,
+    after sorting or appending rows.
+    
+    For negative values of `n`, this function returns all rows except
+    the first `n` rows, equivalent to ``df[n:]``.
+    
+    Parameters
+    ----------
+    n : int, default 5
+        Number of rows to select.
+    
+    Returns
+    -------
+    type of caller
+        The last `n` rows of the caller object.
+    
+    See Also
+    --------
+    DataFrame.head : The first `n` rows of the caller object.
+    
+    Examples
+    --------
+    &gt;&gt;&gt; df = pd.DataFrame({'animal': ['alligator', 'bee', 'falcon', 'lion',
+    ...                    'monkey', 'parrot', 'shark', 'whale', 'zebra']})
+    &gt;&gt;&gt; df
+          animal
+    0  alligator
+    1        bee
+    2     falcon
+    3       lion
+    4     monkey
+    5     parrot
+    6      shark
+    7      whale
+    8      zebra
+    
+    Viewing the last 5 lines
+    
+    &gt;&gt;&gt; df.tail()
+       animal
+    4  monkey
+    5  parrot
+    6   shark
+    7   whale
+    8   zebra
+    
+    Viewing the last `n` lines (three in this case)
+    
+    &gt;&gt;&gt; df.tail(3)
+      animal
+    6  shark
+    7  whale
+    8  zebra
+    
+    For negative values of `n`
+    
+    &gt;&gt;&gt; df.tail(-3)
+       animal
+    3    lion
+    4  monkey
+    5  parrot
+    6   shark
+    7   whale
+    8   zebra
+</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="data-related-to-beta-120-degrees" class="level2">
+<h2 class="anchored" data-anchor-id="data-related-to-beta-120-degrees">Data related to ‘Beta = 120 degrees’</h2>
+<div id="cell-17" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>display(df2)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Before sorting in ascending order</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>df2 <span class="op">=</span> df2.sort_values(by<span class="op">=</span>[<span class="st">'Q (Ls^-1)'</span>])</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># After sorting all columns with respect to the flowrate column (Q, Ls^-1) in ascending order</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Q (Ls^-1)</th>
+<th data-quarto-table-cell-role="th">Distance y (mm)</th>
+<th data-quarto-table-cell-role="th">m_dot (kg s^-1)</th>
+<th data-quarto-table-cell-role="th">u (ms^-1)</th>
+<th data-quarto-table-cell-role="th">u0 (ms^-1)</th>
+<th data-quarto-table-cell-role="th">m_dot x u0 (kg m s^-2)</th>
+<th data-quarto-table-cell-role="th">Experimental force, F (N)</th>
+<th data-quarto-table-cell-role="th">Theoretical force, F (N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.2600</td>
+<td>30</td>
+<td>0.2600</td>
+<td>3.310415</td>
+<td>3.205019</td>
+<td>0.833305</td>
+<td>1.17720</td>
+<td>1.249957</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0.3125</td>
+<td>55</td>
+<td>0.3125</td>
+<td>3.978864</td>
+<td>3.891614</td>
+<td>1.216129</td>
+<td>2.15820</td>
+<td>1.824194</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.4170</td>
+<td>90</td>
+<td>0.4170</td>
+<td>5.309396</td>
+<td>5.244329</td>
+<td>2.186885</td>
+<td>3.53160</td>
+<td>3.280328</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.4630</td>
+<td>127</td>
+<td>0.4630</td>
+<td>5.895085</td>
+<td>5.836551</td>
+<td>2.702323</td>
+<td>4.98348</td>
+<td>4.053485</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0.5000</td>
+<td>145</td>
+<td>0.5000</td>
+<td>6.366183</td>
+<td>6.312019</td>
+<td>3.156010</td>
+<td>5.68980</td>
+<td>4.734014</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>0.6060</td>
+<td>200</td>
+<td>0.6060</td>
+<td>7.715814</td>
+<td>7.671185</td>
+<td>4.648738</td>
+<td>7.84800</td>
+<td>6.973107</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Q (Ls^-1)  Distance y (mm)  m_dot (kg s^-1)  u (ms^-1)  u0 (ms^-1)  \
+0     0.2600               30           0.2600   3.310415    3.205019   
+1     0.3125               55           0.3125   3.978864    3.891614   
+2     0.4170               90           0.4170   5.309396    5.244329   
+3     0.4630              127           0.4630   5.895085    5.836551   
+4     0.5000              145           0.5000   6.366183    6.312019   
+5     0.6060              200           0.6060   7.715814    7.671185   
+
+   m_dot x u0 (kg m s^-2)  Experimental force, F (N)  Theoretical force, F (N)  
+0                0.833305                    1.17720                  1.249957  
+1                1.216129                    2.15820                  1.824194  
+2                2.186885                    3.53160                  3.280328  
+3                2.702323                    4.98348                  4.053485  
+4                3.156010                    5.68980                  4.734014  
+5                4.648738                    7.84800                  6.973107  </code></pre>
+</div>
+</div>
+</section>
+<section id="data-related-to-beta-180-degrees" class="level2">
+<h2 class="anchored" data-anchor-id="data-related-to-beta-180-degrees">Data related to ‘Beta = 180 degrees’</h2>
+<div id="cell-19" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>display(df3)</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Before sorting in ascending order</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>df3 <span class="op">=</span> df3.sort_values(by<span class="op">=</span>[<span class="st">'Q (Ls^-1)'</span>])</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co"># After sorting all columns with respect to the flowrate column (Q, Ls^-1) in ascending order</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df3)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Q (Ls^-1)</th>
+<th data-quarto-table-cell-role="th">Distance y (mm)</th>
+<th data-quarto-table-cell-role="th">m_dot (kg s^-1)</th>
+<th data-quarto-table-cell-role="th">u (ms^-1)</th>
+<th data-quarto-table-cell-role="th">u0 (ms^-1)</th>
+<th data-quarto-table-cell-role="th">m_dot x u0 (kg m s^-2)</th>
+<th data-quarto-table-cell-role="th">Experimental force, F (N)</th>
+<th data-quarto-table-cell-role="th">Theoretical force, F (N)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>0.4630</td>
+<td>127</td>
+<td>0.4630</td>
+<td>5.895085</td>
+<td>5.836551</td>
+<td>2.702323</td>
+<td>4.98348</td>
+<td>4.053485</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>0.3125</td>
+<td>55</td>
+<td>0.3125</td>
+<td>3.978864</td>
+<td>3.891614</td>
+<td>1.216129</td>
+<td>2.15820</td>
+<td>1.824194</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>0.5000</td>
+<td>145</td>
+<td>0.5000</td>
+<td>6.366183</td>
+<td>6.312019</td>
+<td>3.156010</td>
+<td>5.68980</td>
+<td>4.734014</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>0.6060</td>
+<td>200</td>
+<td>0.6060</td>
+<td>7.715814</td>
+<td>7.671185</td>
+<td>4.648738</td>
+<td>7.84800</td>
+<td>6.973107</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>0.2600</td>
+<td>30</td>
+<td>0.2600</td>
+<td>3.310415</td>
+<td>3.205019</td>
+<td>0.833305</td>
+<td>1.17720</td>
+<td>1.249957</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>0.4170</td>
+<td>90</td>
+<td>0.4170</td>
+<td>5.309396</td>
+<td>5.244329</td>
+<td>2.186885</td>
+<td>3.53160</td>
+<td>3.280328</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Q (Ls^-1)  Distance y (mm)  m_dot (kg s^-1)  u (ms^-1)  u0 (ms^-1)  \
+4     0.2600               30           0.2600   3.310415    3.205019   
+1     0.3125               55           0.3125   3.978864    3.891614   
+5     0.4170               90           0.4170   5.309396    5.244329   
+0     0.4630              127           0.4630   5.895085    5.836551   
+2     0.5000              145           0.5000   6.366183    6.312019   
+3     0.6060              200           0.6060   7.715814    7.671185   
+
+   m_dot x u0 (kg m s^-2)  Experimental force, F (N)  Theoretical force, F (N)  
+4                0.833305                    1.17720                  1.249957  
+1                1.216129                    2.15820                  1.824194  
+5                2.186885                    3.53160                  3.280328  
+0                2.702323                    4.98348                  4.053485  
+2                3.156010                    5.68980                  4.734014  
+3                4.648738                    7.84800                  6.973107  </code></pre>
+</div>
+</div>
+<section id="note-there-is-not-data-in-the-table-beta-180-degrees-in-file-sampledata_impactofjet.xlsx." class="level3">
+<h3 class="anchored" data-anchor-id="note-there-is-not-data-in-the-table-beta-180-degrees-in-file-sampledata_impactofjet.xlsx.">Note: There is not data in the table, ‘Beta = 180 degrees’ in file, <code>SampleData_ImpactOfJet.xlsx</code>.</h3>
+<p><strong>It was deliberately left with only the column labels and headers empty.</strong> <strong>That’s why there is not data showing up.</strong> **You get the idea!</p>
+</section>
+</section>
+<section id="dataframe-shape" class="level2">
+<h2 class="anchored" data-anchor-id="dataframe-shape">Dataframe Shape</h2>
+<p>An <strong>m</strong> x <strong>n</strong> matrix has <strong>m</strong> rows and <strong>n</strong> columns. A dataframe also has rows and columns! Let’s get the shape of the dataframe using <code>df1.shape</code></p>
+<p><code>df1.shape</code> will return the <code>(number_of_rows, number_of_columns)</code></p>
+<div id="cell-22" class="cell" data-cell_id="00010-25a8fc17-68f8-4971-9123-a52b0e81587c" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="20" data-execution_start="1633631434431" data-source_hash="14f60b8f" data-tags="[]" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>df1.shape</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: Table-related to the dataframe df1 needs to be filled with your experimental data. </span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># It has been filled with sample data in the file.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>(6, 8)</code></pre>
+</div>
+</div>
+<div id="cell-23" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>df2.shape </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: Table-related to the dataframe df2 needs to be filled with your experimental data. </span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="co"># It has been filled with sample data in the file.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="11">
+<pre><code>(6, 8)</code></pre>
+</div>
+</div>
+<div id="cell-24" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>df3.shape</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: Table-related to the dataframe df3 needs to be filled with your experimental data. </span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># It has been deliberately left blank in the sample data file.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>(6, 8)</code></pre>
+</div>
+</div>
+</section>
+<section id="accessing-data-within-frames" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-data-within-frames">Accessing Data within Frames</h2>
+</section>
+<section id="lets-start-with-accessing-data-in-the-dataframe-df1." class="level2">
+<h2 class="anchored" data-anchor-id="lets-start-with-accessing-data-in-the-dataframe-df1.">Let’s start with accessing data in the dataframe, <code>df1</code>.</h2>
+<p>Using the <code>df1.iloc['Row', 'Column']</code> function we can locate certain data.</p>
+<p>Last week we used this for plotting. We will get to that in a second. Let’s pull out all the data starting with <code>row-index 1</code> and <code>column-index 1</code> in the dataframe <code>df1</code>.</p>
+<div id="cell-27" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_90 <span class="op">=</span> df1.iloc[:,<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-28" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_90 <span class="op">=</span> <span class="bu">list</span>(Momentum_rate_90)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Momemtum_rate_90` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-29" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_90</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>[3.3106367316186254,
+ 3.5900570440590207,
+ 3.7686587369700386,
+ 4.008707804234739,
+ 4.226626919107985,
+ 4.495692419023809]</code></pre>
+</div>
+</div>
+<div id="cell-30" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_90 <span class="op">=</span> df1.iloc[:,<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-31" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_90 <span class="op">=</span> <span class="bu">list</span>(Experimental_force_90)</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Experimental_force_90` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-32" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_90</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<pre><code>[3.1392, 3.3354, 3.49236, 3.6493200000000003, 3.84552, 4.27716]</code></pre>
+</div>
+</div>
+<div id="cell-33" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_90 <span class="op">=</span> df1.iloc[:,<span class="dv">7</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-34" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_90 <span class="op">=</span> <span class="bu">list</span>(Theoretical_force_90)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Theoretical_force_90` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-35" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_90</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>[3.310636731618625,
+ 3.5900570440590203,
+ 3.768658736970038,
+ 4.008707804234738,
+ 4.226626919107984,
+ 4.495692419023808]</code></pre>
+</div>
+</div>
+</section>
+<section id="matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df1" class="level2">
+<h2 class="anchored" data-anchor-id="matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df1">Matplotlib Pyplot Figures and Subplots for the dataframe, <code>df1</code></h2>
+</section>
+<section id="also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit." class="level2">
+<h2 class="anchored" data-anchor-id="also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.">Also .. First-degree polynomial fit, fancy way of saying linear-fit.</h2>
+<p>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.</p>
+<p>Source: https://matplotlib.org</p>
+<p>A figure is just a place for our plots to exist. A figure can have multiple <strong>subplots</strong> which are arranged like a matrix in rows and columns. Each subplot is called an axis.</p>
+<p>In the cell that follows, we also will use <code>np.polyfit()</code> to <code>np.poly1d()</code> to create a first-degree best fit line.</p>
+<p>Let’s play around with the subplots feature a little bit.</p>
+<p>To create a set of axes, use the function:</p>
+<p><code>fig, axs = plt.subplots(num_of_rows, number_of_columns, figsize=(width, height))</code></p>
+<p>Let’s break this down a little at a time.</p>
+<div id="cell-38" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set up our single subplot!</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">8</span>))</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="co">#let's establish the x-axis with the variable "Momentum_rate"</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co">#And establish our y-axis values with the following variables:</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Experimental_force</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Theoretical_force</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a><span class="co"># red dashes, blue dots and green triangles</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_90, Experimental_force_90, color<span class="op">=</span><span class="st">'r'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'Experiment'</span>)</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_90, Theoretical_force_90, color<span class="op">=</span><span class="st">'b'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Theory'</span>) </span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a><span class="co">#plot first-degree least-squares fit lines for Experimental Force Exerted for Table 3</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>C_90 <span class="op">=</span> np.polyfit(Momentum_rate_90, Experimental_force_90, <span class="dv">1</span>) <span class="co">#define coefficients for slope and y-intercept</span></span>
+<span id="cb33-16"><a href="#cb33-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-17"><a href="#cb33-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the slope and intercept of the line</span></span>
+<span id="cb33-18"><a href="#cb33-18" aria-hidden="true" tabindex="-1"></a>slope_90 <span class="op">=</span> C_90[<span class="dv">0</span>]</span>
+<span id="cb33-19"><a href="#cb33-19" aria-hidden="true" tabindex="-1"></a><span class="co">#print(slope_90)</span></span>
+<span id="cb33-20"><a href="#cb33-20" aria-hidden="true" tabindex="-1"></a>intercept_90 <span class="op">=</span> C_90[<span class="dv">1</span>]</span>
+<span id="cb33-21"><a href="#cb33-21" aria-hidden="true" tabindex="-1"></a><span class="co">#print(intercept_90)</span></span>
+<span id="cb33-22"><a href="#cb33-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-23"><a href="#cb33-23" aria-hidden="true" tabindex="-1"></a>f_linear_90 <span class="op">=</span> np.poly1d(C_90) <span class="co">#create function for best fit line using slope and y-intercept</span></span>
+<span id="cb33-24"><a href="#cb33-24" aria-hidden="true" tabindex="-1"></a>bestfit_line <span class="op">=</span> f_linear_90(Momentum_rate_90)</span>
+<span id="cb33-25"><a href="#cb33-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-26"><a href="#cb33-26" aria-hidden="true" tabindex="-1"></a><span class="co">#plot the best fit line for the experimental values using a dashed red line</span></span>
+<span id="cb33-27"><a href="#cb33-27" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_90, bestfit_line, color<span class="op">=</span><span class="st">'g'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Best Fit Line - Experimental Force Exerted'</span>)</span>
+<span id="cb33-28"><a href="#cb33-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-29"><a href="#cb33-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-30"><a href="#cb33-30" aria-hidden="true" tabindex="-1"></a><span class="co">#and lets get a little fancy an add some labeling</span></span>
+<span id="cb33-31"><a href="#cb33-31" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Rate of delivery of momentum &lt;kg m s^-2&gt;'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb33-32"><a href="#cb33-32" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Force &lt;N&gt;'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb33-33"><a href="#cb33-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-34"><a href="#cb33-34" aria-hidden="true" tabindex="-1"></a><span class="co">#and maybe a title for our plot</span></span>
+<span id="cb33-35"><a href="#cb33-35" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Vane with Beta = 90 degrees'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb33-36"><a href="#cb33-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-37"><a href="#cb33-37" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.axis([x1, x2, y1, y2]) limits the view we want to see</span></span>
+<span id="cb33-38"><a href="#cb33-38" aria-hidden="true" tabindex="-1"></a>ax.axis([<span class="dv">3</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">5</span>])</span>
+<span id="cb33-39"><a href="#cb33-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-40"><a href="#cb33-40" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.grid() adds a grid to the plot</span></span>
+<span id="cb33-41"><a href="#cb33-41" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb33-42"><a href="#cb33-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-43"><a href="#cb33-43" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.lengend() adds a legend (and finally a semi-colon to eliminate the default printing)</span></span>
+<span id="cb33-44"><a href="#cb33-44" aria-hidden="true" tabindex="-1"></a>ax.legend()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ImpactOfJet_SampleData_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="save-the-above-plot-as-a-png-file-for-the-dataframe-df1" class="level2">
+<h2 class="anchored" data-anchor-id="save-the-above-plot-as-a-png-file-for-the-dataframe-df1">Save the above plot as a png-file, for the dataframe, <code>df1</code></h2>
+<p>Note that <code>fig</code> is the variable assigned to the plot above. Review the cell with the plotting code. The following line of code will save the above plot in the same working directory where the the jupyter notebook was saved.</p>
+<div id="cell-41" class="cell" data-cell_id="00033-f62f3128-a362-4406-ab27-45b9ea74e283" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="1" data-execution_start="1633633207217" data-source_hash="75fe9844" data-tags="[]" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'Bulusu_Moss_Gajula_Consultants1.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="lets-now-try-accessing-data-in-the-dataframe-df2." class="level2">
+<h2 class="anchored" data-anchor-id="lets-now-try-accessing-data-in-the-dataframe-df2.">Let’s now try accessing data in the dataframe, <code>df2</code>.</h2>
+<p>Using the <code>df2.iloc['Row', 'Column']</code> function we can locate certain data.</p>
+<p>Last week we used this for plotting. We will get to that in a second. Let’s pull out all the data starting with <code>row-index 1</code> and <code>column-index 1</code> in the dataframe <code>df1</code>.</p>
+<div id="cell-43" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_120 <span class="op">=</span> df2.iloc[:,<span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-44" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_120 <span class="op">=</span> <span class="bu">list</span>(Momentum_rate_120)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Momemtum_rate_120` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-45" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>Momentum_rate_120</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<pre><code>[0.8333049878310794,
+ 1.21612943031991,
+ 2.1868853672915844,
+ 2.7023232399019768,
+ 3.1560095021719508,
+ 4.64873811700808]</code></pre>
+</div>
+</div>
+<div id="cell-46" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_120 <span class="op">=</span> df2.iloc[:,<span class="dv">6</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-47" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_120 <span class="op">=</span> <span class="bu">list</span>(Experimental_force_120)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Experimental_force_120` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-48" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>Experimental_force_120</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<pre><code>[1.1772, 2.1582000000000003, 3.5316000000000005, 4.98348, 5.6898, 7.848]</code></pre>
+</div>
+</div>
+<div id="cell-49" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_120 <span class="op">=</span> df2.iloc[:,<span class="dv">7</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-50" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_120 <span class="op">=</span> <span class="bu">list</span>(Theoretical_force_120)</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="co"># A little bit Python wizardry happened in this cell.</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="co"># The date saved in the variable, `Theoretical_force_120` was converted into a `list` data type to avoid future pain.</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="co"># While you are expected to follow along to get to the beautiful data plot presented later, </span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="co"># you can do your own research exploring various Python data types such as int, float, list, arrays, dictionaries etc.</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-51" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>Theoretical_force_120</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<pre><code>[1.249957481746619,
+ 1.8241941454798647,
+ 3.280328050937376,
+ 4.053484859852965,
+ 4.734014253257925,
+ 6.973107175512119]</code></pre>
+</div>
+</div>
+</section>
+<section id="matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df2" class="level2">
+<h2 class="anchored" data-anchor-id="matplotlib-pyplot-figures-and-subplots-for-the-dataframe-df2">Matplotlib Pyplot Figures and Subplots for the dataframe, <code>df2</code></h2>
+</section>
+<section id="also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.-1" class="level2">
+<h2 class="anchored" data-anchor-id="also-..-first-degree-polynomial-fit-fancy-way-of-saying-linear-fit.-1">Also .. First-degree polynomial fit, fancy way of saying linear-fit.</h2>
+<p>Matplotlib is a comprehensive library for creating static, animated, and interactive visualizations in Python. Matplotlib makes easy things easy and hard things possible.</p>
+<p>Source: https://matplotlib.org</p>
+<p>A figure is just a place for our plots to exist. A figure can have multiple <strong>subplots</strong> which are arranged like a matrix in rows and columns. Each subplot is called an axis.</p>
+<p>In the cell that follows, we also will use <code>np.polyfit()</code> to <code>np.poly1d()</code> to create a first-degree best fit line.</p>
+<p>Let’s play around with the subplots feature a little bit.</p>
+<p>To create a set of axes, use the function:</p>
+<p><code>fig, axs = plt.subplots(num_of_rows, number_of_columns, figsize=(width, height))</code></p>
+<p>Let’s break this down a little at a time.</p>
+<div id="cell-54" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set up our single subplot!</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(figsize<span class="op">=</span>(<span class="dv">8</span>,<span class="dv">8</span>))</span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a><span class="co">#let's establish the x-axis with the variable "Momentum_rate"</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a><span class="co">#And establish our y-axis values with the following variables:</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a><span class="co">#Experimental_force</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a><span class="co">#Theoretical_force</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a><span class="co"># red dashes, blue dots and green triangles</span></span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_120, Experimental_force_120, color<span class="op">=</span><span class="st">'r'</span>, marker<span class="op">=</span><span class="st">'o'</span>, label<span class="op">=</span><span class="st">'Experiment'</span>)</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_120, Theoretical_force_120, color<span class="op">=</span><span class="st">'b'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Theory'</span>) </span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a><span class="co">#plot first-degree least-squares fit lines for Experimental Force Exerted for Table 3</span></span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>C_120 <span class="op">=</span> np.polyfit(Momentum_rate_120, Experimental_force_120, <span class="dv">1</span>) <span class="co">#define coefficients for slope and y-intercept</span></span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Get the slope and intercept of the line</span></span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>slope_120 <span class="op">=</span> C_120[<span class="dv">0</span>]</span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co">#print(slope_120)</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>intercept_120 <span class="op">=</span> C_120[<span class="dv">1</span>]</span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a><span class="co">#print(intercept_120)</span></span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>f_linear_120 <span class="op">=</span> np.poly1d(C_120) <span class="co">#create function for best fit line using slope and y-intercept</span></span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a>bestfit_line <span class="op">=</span> f_linear_120(Momentum_rate_120)</span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a><span class="co">#plot the best fit line for the experimental values using a dashed red line</span></span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a>ax.plot(Momentum_rate_120, bestfit_line, color<span class="op">=</span><span class="st">'g'</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, label<span class="op">=</span><span class="st">'Best Fit Line - Experimental Force Exerted'</span>)</span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a><span class="co">#and lets get a little fancy an add some labeling</span></span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'Rate of delivery of momentum &lt;kg m s^-2&gt;'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Force &lt;N&gt;'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb47-33"><a href="#cb47-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-34"><a href="#cb47-34" aria-hidden="true" tabindex="-1"></a><span class="co">#and maybe a title for our plot</span></span>
+<span id="cb47-35"><a href="#cb47-35" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Vane with Beta = 120 degrees'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb47-36"><a href="#cb47-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-37"><a href="#cb47-37" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.axis([x1, x2, y1, y2]) limits the view we want to see</span></span>
+<span id="cb47-38"><a href="#cb47-38" aria-hidden="true" tabindex="-1"></a>ax.axis([<span class="dv">0</span>, <span class="dv">9</span>, <span class="dv">0</span>, <span class="dv">9</span>])</span>
+<span id="cb47-39"><a href="#cb47-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-40"><a href="#cb47-40" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.grid() adds a grid to the plot</span></span>
+<span id="cb47-41"><a href="#cb47-41" aria-hidden="true" tabindex="-1"></a>ax.grid()</span>
+<span id="cb47-42"><a href="#cb47-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-43"><a href="#cb47-43" aria-hidden="true" tabindex="-1"></a><span class="co">#ax.lengend() adds a legend (and finally a semi-colon to eliminate the default printing)</span></span>
+<span id="cb47-44"><a href="#cb47-44" aria-hidden="true" tabindex="-1"></a>ax.legend()<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="ImpactOfJet_SampleData_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="save-the-above-plot-as-a-png-file" class="level2">
+<h2 class="anchored" data-anchor-id="save-the-above-plot-as-a-png-file">Save the above plot as a png-file</h2>
+<p>Note that <code>fig</code> is the variable assigned to the plot above. Review the cell with the plotting code. The following line of code will save the above plot in the same working directory where the the jupyter notebook was saved.</p>
+<div id="cell-57" class="cell" data-cell_id="00033-f62f3128-a362-4406-ab27-45b9ea74e283" data-deepnote_cell_type="code" data-deepnote_to_be_reexecuted="false" data-execution_millis="1" data-execution_start="1633633207217" data-source_hash="75fe9844" data-tags="[]" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>fig.savefig(<span class="st">'Bulusu_Moss_Gajula_Consultants2.png'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data" class="level2">
+<h2 class="anchored" data-anchor-id="now-that-you-learned-how-to-run-a-python-code-that-plots-your-experimental-data">Now that you learned how to run a python code that plots your experimental data</h2>
+<section id="you-should-have-three-tables-of-data-gathered." class="level3">
+<h3 class="anchored" data-anchor-id="you-should-have-three-tables-of-data-gathered.">You should have three tables of data gathered.</h3>
+</section>
+<section id="you-can-start-by-adding-data-in-the-dataframe-df3-by-modified-the-file-sampledata_impactofjet.xlsx." class="level3">
+<h3 class="anchored" data-anchor-id="you-can-start-by-adding-data-in-the-dataframe-df3-by-modified-the-file-sampledata_impactofjet.xlsx.">You can start by adding data in the dataframe <code>df3</code> by modified the file, <code>SampleData_ImpactOfJet.xlsx</code>.</h3>
+</section>
+<section id="you-should" class="level3">
+<h3 class="anchored" data-anchor-id="you-should">You should</h3>
+<ol type="1">
+<li>Use the excel formatted template to input your own data gathered in the lab</li>
+<li>Try adapting this Python code to plot your own data from lab.</li>
+<li>Make sure you include the excel spreadsheet file with you experimental data in the same folder as this code.</li>
+</ol>
+</section>
+<section id="ultimately-you-need-to-submit-the-following-deliverables-on-blackboard" class="level3">
+<h3 class="anchored" data-anchor-id="ultimately-you-need-to-submit-the-following-deliverables-on-blackboard">Ultimately, you need to submit the following deliverables on Blackboard</h3>
+<ol type="1">
+<li>Excel file with <strong>your</strong> experimental data</li>
+<li>A working code that works with <strong>your</strong> experimental data and</li>
+<li><strong>Three plots in png-format</strong> each showing the data from the geometries used in the experiment.</li>
+<li>Scanned copy of the data written up in the handout provided to you in the lab.</li>
+</ol>
+</section>
+<section id="only-a-working-code-that-is-written-by-you-will-be-graded." class="level3">
+<h3 class="anchored" data-anchor-id="only-a-working-code-that-is-written-by-you-will-be-graded.">Only a working code that is written by you will be graded.</h3>
+<p><a style="text-decoration:none;line-height:16px;display:flex;color:#5B5B62;padding:10px;justify-content:end;" href="https://deepnote.com?utm_source=created-in-deepnote-cell&amp;projectId=928a4826-6d7d-44bd-b128-d6cd83127a49" target="_blank"> <img alt="Created in deepnote.com" style="display:inline;max-height:16px;margin:0px;margin-right:7.5px;" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogU2tldGNoIDU0LjEgKDc2NDkwKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5Hcm91cCAzPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBTa2V0Y2guPC9kZXNjPgogICAgPGcgaWQ9IkxhbmRpbmciIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLCAtNzkuMDAwMDAwKSI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cC0zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMjM1LjAwMDAwMCwgNzkuMDAwMDAwKSI+CiAgICAgICAgICAgICAgICA8cG9seWdvbiBpZD0iUGF0aC0yMCIgZmlsbD0iIzAyNjVCNCIgcG9pbnRzPSIyLjM3NjIzNzYyIDgwIDM4LjA0NzY2NjcgODAgNTcuODIxNzgyMiA3My44MDU3NTkyIDU3LjgyMTc4MjIgMzIuNzU5MjczOSAzOS4xNDAyMjc4IDMxLjY4MzE2ODMiPjwvcG9seWdvbj4KICAgICAgICAgICAgICAgIDxwYXRoIGQ9Ik0zNS4wMDc3MTgsODAgQzQyLjkwNjIwMDcsNzYuNDU0OTM1OCA0Ny41NjQ5MTY3LDcxLjU0MjI2NzEgNDguOTgzODY2LDY1LjI2MTk5MzkgQzUxLjExMjI4OTksNTUuODQxNTg0MiA0MS42NzcxNzk1LDQ5LjIxMjIyODQgMjUuNjIzOTg0Niw0OS4yMTIyMjg0IEMyNS40ODQ5Mjg5LDQ5LjEyNjg0NDggMjkuODI2MTI5Niw0My4yODM4MjQ4IDM4LjY0NzU4NjksMzEuNjgzMTY4MyBMNzIuODcxMjg3MSwzMi41NTQ0MjUgTDY1LjI4MDk3Myw2Ny42NzYzNDIxIEw1MS4xMTIyODk5LDc3LjM3NjE0NCBMMzUuMDA3NzE4LDgwIFoiIGlkPSJQYXRoLTIyIiBmaWxsPSIjMDAyODY4Ij48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMCwzNy43MzA0NDA1IEwyNy4xMTQ1MzcsMC4yNTcxMTE0MzYgQzYyLjM3MTUxMjMsLTEuOTkwNzE3MDEgODAsMTAuNTAwMzkyNyA4MCwzNy43MzA0NDA1IEM4MCw2NC45NjA0ODgyIDY0Ljc3NjUwMzgsNzkuMDUwMzQxNCAzNC4zMjk1MTEzLDgwIEM0Ny4wNTUzNDg5LDc3LjU2NzA4MDggNTMuNDE4MjY3Nyw3MC4zMTM2MTAzIDUzLjQxODI2NzcsNTguMjM5NTg4NSBDNTMuNDE4MjY3Nyw0MC4xMjg1NTU3IDM2LjMwMzk1NDQsMzcuNzMwNDQwNSAyNS4yMjc0MTcsMzcuNzMwNDQwNSBDMTcuODQzMDU4NiwzNy43MzA0NDA1IDkuNDMzOTE5NjYsMzcuNzMwNDQwNSAwLDM3LjczMDQ0MDUgWiIgaWQ9IlBhdGgtMTkiIGZpbGw9IiMzNzkzRUYiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+">  Created in <span style="font-weight:600;margin-left:4px;">Deepnote</span></a></p>
+
+
+</section>
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>This is a Quarto website. To learn more about Quarto websites visit <a href="https://quarto.org/docs/websites" class="uri">https://quarto.org/docs/websites</a>.<br> Contact: <a href="mailto:bulusu@email.gwu.edu">Kartik Bulusu</a><br> © 2025 All rights reserved</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>
