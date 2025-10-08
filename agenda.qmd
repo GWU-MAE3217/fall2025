@@ -167,8 +167,10 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>6: 10/06 to 10/12</td>
             <td>10/08</td>   
-            <td><strong>Lab-2:</strong> Impact of a Jet<ul>
-                <!-- <li><strong>Lab-3:</strong> Impact of a Jet</li> -->
+            <td><strong>Lab-2:</strong> Impact of a Jet
+                <ul>
+                <a href="/documents/Lab_ImpactJet/MAE3127_Lab_ImpactJet_10072025.pdf" target="_blank"><strong>Discussion</strong>
+                </ul> 
             </td>                      
             <td>SEH B1200</td>            
             <td>
