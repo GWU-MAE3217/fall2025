@@ -259,6 +259,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td><strong>Make sure you</strong><ul> 
                 <li>Submit <strong>P-Set5</strong> solutions by 12/01, and </li> 
                 <li>Submit <strong>Lab-4</strong> report on Fluid Friction by 12/01</li>
+                <li>Submit <strong>Final Ethics Poster draft</strong> by 12/01</li>  
             </td>
         </tr>         
         <tr>
