@@ -192,13 +192,22 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
             <td>10/15</td>             
             <td><strong  style="text-align: center">Engineering Ethics</strong>
             <ul>
-                <li>Case studies</li>
-                <li>Introduction to the Group Poster Project</li> 
-                <li>Group Formation</li>
+                <li><a href="/documents/Ethics/Intro_to_EngEthics_Fall2025.pdf" target="_blank"><strong>Case studies</strong></li>      
+                <ul>                                   
+                <!-- <li>Introduction to the Group Poster Project</li>  -->
+                    <li><a href="https://youtu.be/umeFUCqqpJ8?si=q1WqzVp9CFur9gLYf" target="_blank"><strong>Youtube Video about 1986 Space Shuttle Challenger Disaster</strong></li>           
+                    <li><a href="https://youtu.be/hBjntrebxj8?si=t69kWT5JqBnK636p" target="_blank"><strong>Youtube Video about 2018 FIU Pedestrain Bridge Collapse</strong></li> 
+                </ul>          
+                <li><a href="/documents/Ethics/Groups_Fall2025_Oct15.pdf" target="_blank"><strong>Ethics presentation groups</strong></li>                
             </ul>
             </td>                      
             <td>SEH B1280</td>            
-            <td>None</td>      
+            <td><li><strong>Download files for Ethics Poster Assignment</strong></li>
+            <ul>
+                <li><a href="/documents/Ethics/MAE3127 EngineeringEthics_Scenarios_Fall 2025.pdf" target="_blank"><strong>Ethics Scenarios</strong></li> 
+                <li><a href="/documents/Ethics/Ethics_Assignment_Rubrics.pdf" target="_blank"><strong>Assignment Rubrics</strong></li>
+                <li><a href="/documents/Ethics/Poster_template_Fall2025.pptx" target="_blank"><strong>Poster Template</strong></li>                                      
+            </td>      
         </tr>
         <tr>
             <td>8: 10/20 to 10/26</td>
