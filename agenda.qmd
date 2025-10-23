@@ -225,7 +225,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
                 <li><strong>P-Set4:</strong> Practice problems on Navier-Stokes Equations</li>
             </td>                                
             <td>SEH B1280</td>            
-            <td>Submit <strong>Lab-2</strong> report on Hydraulic Jump by 10/29</td>  
+            <td>Submit <strong>Lab-3</strong> report on Hydraulic Jump by 10/29</td>  
         </tr>
         <tr>
             <td>10: 11/03 to 11/09</td>
