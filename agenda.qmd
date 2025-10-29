@@ -250,7 +250,7 @@ Bulusu, Kartik V. (2025). MAE 3127 Fluid Mechanics Laboratory, Department of Mec
         <tr>
             <td>12: 11/17 to 11/23</td>
             <td>11/19</td>     
-            <td><strong>Laboratory Make Up Session for Lab 4 and Self-paced Ethics poster work</strong></td>        
+            <td><strong>Laboratory Make Up Session for Lab 4 and Self-paced ethics poster work</strong></td>        
             <!-- <td><ul>                     
                     <li><strong>Lab-4:</strong> Fluid Friction</li>
             </td> -->
